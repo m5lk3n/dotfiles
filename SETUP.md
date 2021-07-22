@@ -37,6 +37,9 @@ Top Bar
 Window Titlebars
   -> Configure
 
+Windows
+  -> Focus on Hover
+
 ## powershell
 
 ### Preferences -> Pop
