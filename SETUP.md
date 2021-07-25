@@ -2,10 +2,9 @@
 
 ## baseline
 
-- install POP!_OS 21.04
+- install Pop!_OS 21.04
   - menu bar settings
-    - Tile Windows + Show Active Hint
-    - Large Text
+    -> Tile Windows + Show Active Hint
 - install chrome
   - settings: themes -> gtk+
 - install go: `$ sudo apt install golang-go`
@@ -16,6 +15,12 @@
   set number 
   set nocompatible
   ```
+
+### os
+
+- Settings
+  - Desktop -> General -> Show Maximize Button
+  - Accessibility -> Large Text
 
 ## tweaks
 
