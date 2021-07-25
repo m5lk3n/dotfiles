@@ -8,8 +8,8 @@
 - install nvim
   ```bash
   $ sudo apt install neovim
-  $ # restore [.vimrc](.vimrc)
   ```
+  restore [.vimrc](.vimrc)
 - install chrome
   ```bash
   $ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -91,8 +91,9 @@ Colors -> Use transparent background: ca. 25%
 ```bash
 $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 $ sudo apt install fonts-powerline
-$ # restore [.bashrc](.bashrc)
 ```
+
+restore [.bashrc](.bashrc)
 
 ## Keybindings
 
