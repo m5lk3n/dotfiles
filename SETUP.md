@@ -11,7 +11,7 @@
   ```bash
   $ sudo apt install neovim
   ```
-  restore [.vimrc](.vimrc)
+  restore [.vimrc](.vimrc) to `~`
 - install chrome
   ```bash
   $ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -25,6 +25,12 @@
   $ sudo install <vscode.deb>
   $ rm <vscode.deb>
   ```
+  - install [DejaVu Sans Mono for Powerline](https://stackoverflow.com/questions/64036536/strange-characters-for-ohmyz-in-vscode) font:
+    ```bash
+    $ wget https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
+    $ mv DejaVu\ Sans\ Mono\ for\ Powerline.ttf ~/.local/share/fonts/
+    ```
+  - restore [settings.json](.config/Code/User/settings.json) to `.config/Code/User`
 
 ### OS
 
@@ -96,7 +102,7 @@ $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/ma
 $ sudo apt install fonts-powerline
 ```
 
-restore [.bashrc](.bashrc)
+restore [.bashrc](.bashrc) to `~`
 
 ## Keybindings
 
