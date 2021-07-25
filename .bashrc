@@ -103,3 +103,5 @@ alias ll="lsd -la"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 source /home/michael/.config/broot/launcher/bash/br
+
+printf "\e[?2004l"

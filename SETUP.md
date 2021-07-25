@@ -4,7 +4,9 @@
 
 - install Pop!_OS 21.04
   - menu bar settings
-    -> Tile Windows + Show Active Hint
+    -> Tile Windows
+    -> Floating Window Exceptions -> Configure
+    -> Show Active Hint
 - install nvim
   ```bash
   $ sudo apt install neovim
@@ -29,6 +31,7 @@
 - Settings
   - Desktop -> General -> Show Maximize Button
             -> Background -> Select
+            -> Dock -> Dock Visibility -> Always hide
   - Accessibility -> Large Text
   - Date & Time -> Time Format
 
@@ -98,8 +101,3 @@ restore [.bashrc](.bashrc)
 ## Keybindings
 
 see [dconf](.config/dconf/user.conf)
-
-## Open
-
-- ctrl+shift+v: unwanted control chars
-- certain windows floating
