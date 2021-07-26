@@ -1,12 +1,19 @@
 # Set up Pop!_OS
 
+This is how I set up Pop!_OS (21.04 at the time of writing) on my personal machines.
+
+## General Remarks
+
+- follow step-by-step
+- font installations may require (app) restarts
+
 ## Baseline
 
-- install Pop!_OS 21.04
+- install [Pop!_OS 21.04](https://pop.system76.com/)
   - menu bar settings
-    -> Tile Windows
-    -> Floating Window Exceptions -> Configure
-    -> Show Active Hint
+    - Tile Windows
+    - Floating Window Exceptions -> Configure
+    - Show Active Hint
 - install nvim
   ```bash
   $ sudo apt install neovim
@@ -32,12 +39,13 @@
     ```
   - restore [settings.json](.config/Code/User/settings.json) to `.config/Code/User`
 
-### OS
+### Pop!_OS
 
 - Settings
-  - Desktop -> General -> Show Maximize Button
-            -> Background -> Select
-            -> Dock -> Dock Visibility -> Always hide
+  - Desktop
+    - General -> Show Maximize Button
+    - Background -> Select
+    - Dock -> Dock Visibility -> Always hide
   - Accessibility -> Large Text
   - Date & Time -> Time Format
 
@@ -49,51 +57,49 @@ $ sudo apt install gnome-shell-extensions # requires logout for auto-move-window
 $ gnome-tweaks
 ```
 
-Extensions -> Auto move windows
-  -> Add Google Chrome on 1 (=workspace)
-  -> Add Visual Studio Code on 2
+Extensions
+- Auto move windows
+  - Add Google Chrome on 1 (=workspace)
+  - Add Visual Studio Code on 2
 
 Startup Applications
-  -> Add Google Chrome
+- Add Google Chrome
 
 Top Bar
-  -> Configure
+- Configure
 
 Window Titlebars
-  -> Configure
+- Configure
 
 Windows
-  -> Focus on Hover
+- Focus on Hover
 
-## Terminal
+## Gnome Terminal
 
-### Preferences -> Pop
-
-Text -> Custom font: DejaVu Sans Mono 12
-
-Colors -> Use transparent background: ca. 25%
+- Preferences
+  - Pop
+    - Text -> Custom font: DejaVu Sans Mono 12
+    - Colors -> Use transparent background: 25%
 
 ## Tools
 
-- [fzf](https://github.com/junegunn/fzf)
+- [fzf](https://github.com/junegunn/fzf) (ctrl+r enhancement)
   ```bash
-  $ # install fzf as ctrl+r enhancement
   $ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   $ ~/.fzf/install
   ```
-- [glow](https://github.com/charmbracelet/glow)
+- [glow](https://github.com/charmbracelet/glow) (visualize markdown in terminal)
   ```bash
-  $ # visualize markdown in terminal
   $ mkdir ~/git && cd ~/git
   $ git clone https://github.com/charmbracelet/glow.git
   $ cd glow
 	$ go build
  	$ sudo mv glow /usr/local/bin
   ```
-- [lsd](https://github.com/Peltoche/lsd#installation)
+- [lsd](https://github.com/Peltoche/lsd#installation) (ls deluxe)
 	- `$ alias ll='lsd -al'`
-- [broot](https://github.com/Canop/broot)
-    - [via apt](https://packages.azlux.fr/): `sudo apt install broot`
+- [broot](https://github.com/Canop/broot) (terminal-based folder navigation)
+    - [via apt](https://packages.azlux.fr/): `$ sudo apt install broot`
 
 ## [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
 
