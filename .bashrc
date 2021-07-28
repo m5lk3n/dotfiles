@@ -67,6 +67,7 @@ aliases=(
 plugins=(
   git
   bashmarks
+  golang
 )
 
 source $OSH/oh-my-bash.sh
