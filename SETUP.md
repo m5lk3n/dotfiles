@@ -100,6 +100,7 @@ Windows
 	- `$ alias ll='lsd -al'`
 - [broot](https://github.com/Canop/broot) (terminal-based folder navigation)
     - [via apt](https://packages.azlux.fr/): `$ sudo apt install broot`
+- [bashtop](https://github.com/aristocratos/bashtop): `$ sudo apt install bashtop`
 
 ## [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
 
