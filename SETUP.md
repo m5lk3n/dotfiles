@@ -101,6 +101,7 @@ Windows
 - [broot](https://github.com/Canop/broot) (terminal-based folder navigation)
     - [via apt](https://packages.azlux.fr/): `$ sudo apt install broot`
 - [bashtop](https://github.com/aristocratos/bashtop): `$ sudo apt install bashtop`
+- trash-cli: `$ sudo apt install trash-cli`
 
 ## [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
 
