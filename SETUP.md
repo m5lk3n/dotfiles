@@ -28,9 +28,9 @@ This is how I set up Pop!_OS (21.04 at the time of writing) on my personal machi
 - install go: `$ sudo apt install golang-go`
 - install code
   ```bash
-  $ wget https://go.microsoft.com/fwlink/?LinkID=760868
-  $ sudo install <vscode.deb>
-  $ rm <vscode.deb>
+  $ wget -O vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868
+  $ sudo apt install vscode.deb
+  $ rm ./vscode.deb
   ```
   - install [DejaVu Sans Mono for Powerline](https://stackoverflow.com/questions/64036536/strange-characters-for-ohmyz-in-vscode) font:
     ```bash
