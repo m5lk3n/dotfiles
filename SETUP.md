@@ -88,6 +88,10 @@ Windows
 
 ## Tools
 
+- [gnome-passwordsafe](https://gitlab.gnome.org/World/PasswordSafe)
+  ```bash
+  sudo apt install gnome-passwordsafe
+  ```
 - [fzf](https://github.com/junegunn/fzf) (ctrl+r enhancement)
   ```bash
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
