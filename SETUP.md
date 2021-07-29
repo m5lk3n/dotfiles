@@ -105,6 +105,7 @@ Windows
   ```bash
   alias ll='lsd -al'
   ```
+  - restore [config.yaml](.config/lsd/config.yaml) to `.config/lsd`
 - [broot](https://github.com/Canop/broot) (terminal-based folder navigation)
     - [via apt](https://packages.azlux.fr/)
       ```bash
