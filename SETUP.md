@@ -26,7 +26,7 @@ This is how I set up Pop!_OS (21.04 at the time of writing) on my personal machi
   $ rm ./google-chrome-stable_current_amd64.deb
   ```
 - install go: `$ sudo apt install golang-go`
-- install code
+- install vscode
   ```bash
   $ wget -O vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868
   $ sudo apt install ./vscode.deb
@@ -35,6 +35,7 @@ This is how I set up Pop!_OS (21.04 at the time of writing) on my personal machi
   - install [DejaVu Sans Mono for Powerline](https://stackoverflow.com/questions/64036536/strange-characters-for-ohmyz-in-vscode) font:
     ```bash
     $ wget https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
+    $ mkdir -p ~/.local/share/fonts/
     $ mv DejaVu\ Sans\ Mono\ for\ Powerline.ttf ~/.local/share/fonts/
     ```
   - restore [settings.json](.config/Code/User/settings.json) to `.config/Code/User`
