@@ -49,6 +49,7 @@ This is how I set up Pop!_OS (21.04 at the time of writing) on my personal machi
     - Dock -> Dock Visibility -> Always hide
   - Accessibility -> Large Text
   - Date & Time -> Time Format
+  - About -> Device Name
 
 ## Gnome Tweaks
 
