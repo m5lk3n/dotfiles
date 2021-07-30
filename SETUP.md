@@ -35,12 +35,8 @@ This is how I set up Pop!_OS (21.04 at the time of writing) on my personal machi
   sudo apt install ./vscode.deb
   rm ./vscode.deb
   ```
-  - install [DejaVu Sans Mono for Powerline](https://stackoverflow.com/questions/64036536/strange-characters-for-ohmyz-in-vscode) font:
-    ```bash
-    wget https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
-    mkdir -p ~/.local/share/fonts/
-    mv DejaVu\ Sans\ Mono\ for\ Powerline.ttf ~/.local/share/fonts/
-    ```
+  - install [DejaVu Sans Mono for Powerline](https://stackoverflow.com/questions/64036536/strange-characters-for-ohmyz-in-vscode) font
+    - browse to https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf -> Download -> Install 
   - restore [settings.json](.config/Code/User/settings.json) to `.config/Code/User`
 
 ### Pop!_OS
