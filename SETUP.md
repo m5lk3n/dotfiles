@@ -132,3 +132,8 @@ restore [.bashrc](.bashrc) to `~`
 ## Keybindings
 
 see [dconf](.config/dconf/user.conf)
+
+## Optional: Enable 2FA
+
+- follow steps 1-3 in [How to Use Two-Factor Authentication with Ubuntu](https://www.tecmint.com/enable-two-factor-authentication-in-ubuntu/)
+- disable verification for sudo as per [this answer](https://askubuntu.com/a/942583)
