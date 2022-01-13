@@ -1,6 +1,6 @@
 # Set up Pop!_OS
 
-This is how I set up Pop!_OS (21.04 at the time of writing) on my personal machines.
+This is how I set up Pop!_OS (21.10 at the time of writing) on my personal machines.
 
 ## General Remarks
 
@@ -9,7 +9,7 @@ This is how I set up Pop!_OS (21.04 at the time of writing) on my personal machi
 
 ## Baseline
 
-- install [Pop!_OS 21.04](https://pop.system76.com/)
+- install [Pop!_OS 21.10](https://pop.system76.com/)
   - menu bar settings
     - Tile Windows
     - Floating Window Exceptions -> Configure
@@ -118,6 +118,10 @@ Windows
 - trash-cli
   ```bash
   sudo apt install trash-cli
+  ```
+- neofetch
+  ```neofetch
+  sudo apt install neofetch
   ```
 
 ## [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
