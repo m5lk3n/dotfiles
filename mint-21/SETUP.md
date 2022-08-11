@@ -61,6 +61,8 @@ sudo curl -L https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/3/5/7/4/9/2/6/m
     - Desktop Icons -> Switch off but Mounted Drives
   - Windows
     - Behavior -> Window focus mode -> Mouse
+  - Mouse and Touchpad
+    - Touchpad -> Reverse scrolling direction -> Enabled
 
 ## Gnome Terminal
 
