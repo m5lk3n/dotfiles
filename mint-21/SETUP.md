@@ -62,13 +62,14 @@ sudo curl -L https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/3/5/7/4/9/2/6/m
   - Windows
     - Behavior -> Window focus mode -> Mouse
   - Mouse and Touchpad
+    - Touchpad -> Tap to click -> Enabled 
     - Touchpad -> Reverse scrolling direction -> Enabled
 
 ## Gnome Terminal
 
 - Edit
   - Preferences
-    - Text -> Custom font: DejaVu Sans Mono 12
+    - Text -> Custom font: DejaVu Sans Mono 13
     - Colors -> Use transparent background: 25%
 
 ## Tools
