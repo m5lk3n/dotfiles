@@ -95,6 +95,7 @@ source "$OSH"/oh-my-bash.sh
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$PATH:$HOME/bin"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -122,4 +123,8 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 alias ll="lsd -la"
 
+# additional user config below
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# disable bracketed paste mode (http://www.xfree86.org/current/ctlseqs.html#Bracketed%20Paste%20Mode)
+printf "\e[?2004l"
