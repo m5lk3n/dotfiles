@@ -32,7 +32,10 @@ This is how I set up Linux Mint (21 at the time of writing) Cinnamon Edition on 
   rm ./vscode.deb
   ```
   - install [DejaVu Sans Mono for Powerline](https://stackoverflow.com/questions/64036536/strange-characters-for-ohmyz-in-vscode) font
-    - browse to https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf -> Download -> Install 
+    - browse to https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf -> Download -> Install
+  - install [DejaVu Sans Mono Nerd Font](https://stackoverflow.com/questions/64036536/strange-characters-for-ohmyz-in-vscode) font
+    - download https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DejaVuSansMono.zip -> extract -> double-click "DejaVu Sans Mono Nerd Font Complete.ttf" -> Install
+  - delete downloaded and unzipped artifacts 
   - restore [settings.json](.config/Code/User/settings.json) to `.config/Code/User`
 
 ### Mint
@@ -69,7 +72,7 @@ sudo curl -L https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/3/5/7/4/9/2/6/m
 
 - Edit
   - Preferences
-    - Text -> Custom font: DejaVu Sans Mono 13
+    - Text -> Custom font: DejaVu Sans Mono for Powerline 12
     - Colors -> Use transparent background: 25%
 
 ## Tools
@@ -93,7 +96,6 @@ sudo curl -L https://heise.cloudimg.io/v7/_www-heise-de_/imgs/18/3/5/7/4/9/2/6/m
   ```bash
   alias ll='lsd -al'
   ```
-  - restore [config.yaml](.config/lsd/config.yaml) to `.config/lsd`
 - [bashtop](https://github.com/aristocratos/bashtop)
   ```bash
   sudo apt install bashtop
