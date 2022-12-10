@@ -7,8 +7,9 @@ help:
 	@echo
 	@echo "  where <target> is one of the following"
 	@echo
-	@echo "    install    to back up ~/.vimrc (if existing) to ~/.bak/.vimrc.<timestamp> (creates ~/.bak if needed) and"
-	@echo "               to copy this repo's .vimrc to ~"
+	@echo "    install    to back up ~/.vimrc (if existing) to ~/.bak/.vimrc.<timestamp> (creates ~/.bak if needed),"
+	@echo "               to copy this repo's .vimrc to ~ and"
+	@echo "               to invoke vim plugin installation"
 	@echo
 	@echo "    help       to show this text"
 
@@ -20,3 +21,4 @@ install:
 	@echo
 	@echo "############### INSTALL ###############"
 	cp .vimrc ~/.vimrc
+	vim -c ":PlugInstall" -c ":q!" -c ":q!"
