@@ -16,15 +16,6 @@ This setup also assumes tools like `git` and `curl` to be installed on the syste
 
 `brew install vim -vd protobuf`
 
-#### plugin-manager
-
-Install [vim-plug](https://github.com/junegunn/vim-plug):
-
-```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
 ### Golang
 
 Install `go` with `gopls` (19.3 in my case at the time of writing).
@@ -48,6 +39,10 @@ See [.vimrc](.vimrc) comments for more.
 ## Post-Installation Updates
 
 **Don't forget** to run `:PlugInstall` in `vim` for plugin updates.
+
+## TODO
+
+- Check in `Makefile` if tooling is installed
 
 ## ARCHIVE
 
