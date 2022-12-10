@@ -17,8 +17,11 @@ help:
 install:
 	@echo "############### BACKUP ###############"
 	mkdir -p ~/.bak
-	[[ -e ~/.vimrc ]] && cp ~/.vimrc ~/.bak/.vimrc.${TIMESTAMP}
+	test -s ~/.vimrc && cp ~/.vimrc ~/.bak/.vimrc.${TIMESTAMP}
 	@echo
 	@echo "############### INSTALL ###############"
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	cp .vimrc ~/.vimrc
-	vim -c ":PlugInstall" -c ":q!" -c ":q!"
+	@echo "==============> When the following pauses, press a key to continue and wait for the plugin installation to finish!"
+	vim -c ":PlugInstall" -c ":q!" -c ":q!" 2>/dev/null
+	@echo "==============> Done with vim setup, happy vim-ing."
