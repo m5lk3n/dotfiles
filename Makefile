@@ -13,8 +13,26 @@ help:
 	@echo
 	@echo "    help       to show this text"
 
+# checks existence of required tool stack, fails if not available
+.PHONY: needs_curl
+needs_curl:
+	curl --version > /dev/null
+
+.PHONY: needs_vim
+needs_vim: needs_grep
+	vim --version | grep python3 > /dev/null
+
+.PHONY: needs_grep
+needs_grep:
+	grep --version > /dev/null
+
+.PHONY: needs_gopls
+needs_gopls:
+	gopls version > /dev/null
+
+# tasks
 .PHONY: install
-install:
+install: needs_curl needs_vim needs_gopls
 	@echo "############### BACKUP ###############"
 	mkdir -p ~/.bak
 	test -s ~/.vimrc && cp ~/.vimrc ~/.bak/.vimrc.${TIMESTAMP}

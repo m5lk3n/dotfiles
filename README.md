@@ -1,6 +1,6 @@
 # dotfiles
 
-This repo contains my current dotfiles (currently only `.vimrc`).
+This repo contains my current dotfiles (just `.vimrc` at this time) that can be installed via `Makefile`.
 
 Personally, I use yet another Fedora 37 Workstation installation and macOS Ventura, both preferably with `zsh`. In addition to that, I use `bash` in different (cloud) environments for my work.
 
@@ -8,7 +8,7 @@ The only common denominator is `vim`.
 
 ## Requirements
 
-This setup also assumes tools like `git` and `curl` to be installed on the system.
+This setup also assumes tools like `curl` to be installed on the system. The existence of required tools is checked in the `Makefile`.
 
 ### vim
 
@@ -39,10 +39,6 @@ See [.vimrc](.vimrc) comments for more.
 ## Post-Installation Updates
 
 **Don't forget** to run `:PlugInstall` in `vim` for plugin updates.
-
-## TODO
-
-- Check in `Makefile` if tooling is installed
 
 ## ARCHIVE
 

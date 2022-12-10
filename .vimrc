@@ -12,6 +12,7 @@ set smartindent
 set smartcase
 set nowrap
 set incsearch
+set backspace=indent,eol,start
 
 " ctrl-[hjkl] to navigate between split screens (split e.g. with :vsp) 
 nmap <silent> <c-k> :wincmd k<CR>
