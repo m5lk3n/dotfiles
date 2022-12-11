@@ -7,7 +7,7 @@ help:
 	@echo
 	@echo "  where <target> is one of the following"
 	@echo
-	@echo "    install    to back up existing dotfiles from ~ (.vimrc and .tmux.conf) to ~/.bak/ with a <timestamp> appended (creates ~/.bak/ if needed),"
+	@echo "    install    to back up existing dotfiles from ~ (.zshrc, .vimrc and .tmux.conf) to ~/.bak/ with a <timestamp> appended (creates ~/.bak/ if needed),"
 	@echo "               to copy this repo's dotfiles to ~ and"
 	@echo "               to invoke vim plugin installation"
 	@echo
@@ -30,15 +30,22 @@ needs_grep:
 needs_gopls:
 	gopls version > /dev/null
 
-PHONY: needs_tmux
+.PHONY: needs_tmux
 needs_tmux:
 	tmux -V > /dev/null
 
+.PHONY: needs_zsh
+needs_zsh:
+	zsh --version > /dev/null
+
 # tasks
 .PHONY: install
-install: needs_curl needs_tmux needs_vim needs_gopls
+install: needs_curl needs_tmux needs_vim needs_gopls needs_zsh
 	@echo "############### BACKUP ###############"
 	mkdir -p ~/.bak
+ifeq ($(shell test -s ~/.zshrc && echo -n yes),yes)
+	cp ~/.zshrc ~/.bak/.zshrc.${TIMESTAMP}
+endif
 ifeq ($(shell test -s ~/.tmux.conf && echo -n yes),yes)
 	cp ~/.tmux.conf ~/.bak/.tmux.conf.${TIMESTAMP}
 endif
@@ -47,6 +54,7 @@ ifeq ($(shell test -s ~/.vimrc && echo -n yes),yes)
 endif
 	@echo
 	@echo "############### INSTALL ###############"
+	cp .zshrc ~
 	cp .tmux.conf ~
 	# vim
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
