@@ -45,11 +45,16 @@ Install `tmux`, e.g. on Fedora 37:
 To copy the dotfiles and configure the plugins, run the following:
 
 ```bash
-./make # run to show what happens when installing
-./make install
+make # run to show what happens when installing
+make install
 ```
 
 See [.vimrc](.vimrc) comments for more.
+
+### Z Shell
+
+To also install the `.zshrc` individually, run `make install-zshrc`.
+To install all dotfiles, run `make install-all`.
 
 ## Post-Installation Updates
 
