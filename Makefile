@@ -7,8 +7,8 @@ help:
 	@echo
 	@echo "  where <target> is one of the following"
 	@echo
-	@echo "    install    to back up ~/.vimrc (if existing) to ~/.bak/.vimrc.<timestamp> (creates ~/.bak if needed),"
-	@echo "               to copy this repo's .vimrc to ~ and"
+	@echo "    install    to back up existing dotfiles from ~ (.vimrc and .tmux.conf) to ~/.bak/ with a <timestamp> appended (creates ~/.bak/ if needed),"
+	@echo "               to copy this repo's dotfiles to ~ and"
 	@echo "               to invoke vim plugin installation"
 	@echo
 	@echo "    help       to show this text"
@@ -30,16 +30,27 @@ needs_grep:
 needs_gopls:
 	gopls version > /dev/null
 
+PHONY: needs_tmux
+needs_tmux:
+	tmux -V > /dev/null
+
 # tasks
 .PHONY: install
-install: needs_curl needs_vim needs_gopls
+install: needs_curl needs_tmux needs_vim needs_gopls
 	@echo "############### BACKUP ###############"
 	mkdir -p ~/.bak
-	test -s ~/.vimrc && cp ~/.vimrc ~/.bak/.vimrc.${TIMESTAMP}
+ifeq ($(shell test -s ~/.tmux.conf && echo -n yes),yes)
+	cp ~/.tmux.conf ~/.bak/.tmux.conf.${TIMESTAMP}
+endif
+ifeq ($(shell test -s ~/.vimrc && echo -n yes),yes)
+	cp ~/.vimrc ~/.bak/.vimrc.${TIMESTAMP}
+endif
 	@echo
 	@echo "############### INSTALL ###############"
+	cp .tmux.conf ~
+	# vim
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	cp .vimrc ~/.vimrc
+	cp .vimrc ~
 	@echo "==============> When the following pauses, press a key to continue and wait for the plugin installation to finish!"
 	vim -c ":PlugInstall" -c ":q!" -c ":q!" 2>/dev/null
 	@echo "==============> Done with vim setup, happy vim-ing."

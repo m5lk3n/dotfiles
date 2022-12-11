@@ -1,10 +1,10 @@
 # dotfiles
 
-This repo contains my current dotfiles (just `.vimrc` at this time) that can be installed via `Makefile`.
+This repo contains my current dotfiles that can be installed via `Makefile`.
 
 Personally, I use yet another Fedora 37 Workstation installation and macOS Ventura, both preferably with `zsh`. In addition to that, I use `bash` in different (cloud) environments for my work.
 
-The only common denominator is `vim`.
+The only common denominator is `vim` and `tmux`...
 
 ## Requirements
 
@@ -16,14 +16,29 @@ This setup also assumes tools like `curl` to be installed on the system. The exi
 
 `brew install vim -vd protobuf`
 
+On Fedora 37, it seems to be enough to just run the default installation:
+
+`sudo dnf install vim`
+
 ### Golang
 
-Install `go` with `gopls` (19.3 in my case at the time of writing).
+Install `go` with `gopls` (19.3 in my case at the time of writing), e.g. on Fedora 37:
+
+```bash
+sudo dnf install golang-x-tools-gopls
+sudo dnf install golang
+```
 
 [Configuring Vim to Develop Go Programs](https://medium.com/pragmatic-programmers/configuring-vim-to-develop-go-programs-e839641da4ac):
 
 - [vim-go](https://github.com/fatih/vim-go)
 - [completor](https://github.com/maralla/completor.vim)
+
+### tmux
+
+Install `tmux`, e.g. on Fedora 37:
+
+`sudo dnf install tmux`
 
 ## Installation
 
