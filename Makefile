@@ -72,7 +72,7 @@ endif
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	cp .vimrc ~
 	@echo "==============> When the following pauses, press a key to continue and wait for the plugin installation to finish!"
-	vim -c ":PlugInstall" -c ":q!" -c ":q!" 2>/dev/null
+	vim -c ":PlugInstall" -c ":qall!" 2>/dev/null
 	@echo "==============> Done with vim setup, happy vim-ing."
 
 .PHONY: install-all

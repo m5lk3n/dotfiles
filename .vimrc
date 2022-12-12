@@ -12,7 +12,14 @@ set smartcase
 set nowrap
 set incsearch
 set backspace=indent,eol,start
+set scrolloff=2
 set history=1000
+set ttyfast
+
+set wildmenu
+set wildmode=longest:full,full
+set wildignore+=*.DS_Store,*.bak,*.tmp
+
 set undolevels=1000
 set undofile
 set backup
