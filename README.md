@@ -1,5 +1,7 @@
 # dotfiles
 
+**Disclaimer: Use at your own risk! Files will be overwritten using the below!**
+
 This repo contains my current dotfiles that can be installed via `Makefile`.
 
 Personally, I use yet another Fedora 37 Workstation installation (e.g. [set up on my Pi 400](SETUP.md)) and macOS Ventura, both preferably with `zsh`. In addition to that, I use `bash` in different (cloud) environments for my work.

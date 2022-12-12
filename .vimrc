@@ -2,7 +2,6 @@ imap jj <Esc>
 syntax on
 set number
 set relativenumber
-"set laststatus=2
 set belloff=all
 set encoding=UTF-8
 set tabstop=2 softtabstop=2
@@ -13,6 +12,23 @@ set smartcase
 set nowrap
 set incsearch
 set backspace=indent,eol,start
+set history=1000
+set undolevels=1000
+set undofile
+set backup
+" put undo, backup and swap under /tmp go get free clean-up
+set undodir=/tmp/.vim/$USER/undo//
+set backupdir=/tmp/.vim/$USER/bak//
+set directory=/tmp/.vim/$USER/swp//
+if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p", 0700)
+endif
+if !isdirectory(expand(&backupdir))
+    call mkdir(expand(&backupdir), "p", 0700)
+endif
+if !isdirectory(expand(&directory))
+    call mkdir(expand(&directory), "p", 0700)
+endif
 
 " ctrl-[hjkl] to navigate between split screens (split e.g. with :vsp) 
 nmap <silent> <c-k> :wincmd k<CR>
