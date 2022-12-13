@@ -6,13 +6,13 @@ This repo contains my current dotfiles that can be installed via `Makefile`.
 
 Personally, I use yet another Fedora 37 Workstation installation (e.g. [set up on my Pi 400](SETUP.md)) and macOS Ventura, both preferably with `zsh`. In addition to that, I use `bash` in different (cloud) environments for my work.
 
-The only common denominator is `vim` and `tmux`...
+The only common denominator is `vim`...
 
 ## Requirements
 
 This setup also assumes tools like `curl` to be installed on the system. The existence of required tools is checked in the `Makefile`.
 
-### vim
+### Vim
 
 Vim 8+ with Python 3 support is required. To install on macOS with `brew`:
 
@@ -35,12 +35,6 @@ sudo dnf install golang
 
 - [vim-go](https://github.com/fatih/vim-go)
 - [completor](https://github.com/maralla/completor.vim)
-
-### tmux
-
-Install `tmux`, e.g. on Fedora 37:
-
-`sudo dnf install tmux`
 
 ## Installation
 
