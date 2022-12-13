@@ -1,4 +1,4 @@
-# Setup Fedora 37 Workstation on a Pi 400
+# Setup Fedora 37 Workstation on a Raspberry Pi 400
 
 ## Overclock
 

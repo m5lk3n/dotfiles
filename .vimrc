@@ -23,10 +23,9 @@ set wildignore+=*.DS_Store,*.bak,*.tmp
 set undolevels=1000
 set undofile
 set backup
-" put undo, backup and swap under /tmp go get free clean-up
-set undodir=/tmp/.vim/$USER/undo//
-set backupdir=/tmp/.vim/$USER/bak//
-set directory=/tmp/.vim/$USER/swp//
+set undodir=~/.vim/tmp/undo//
+set backupdir=~/.vim/tmp/bak//
+set directory=~/.vim/tmp/swp//
 if !isdirectory(expand(&undodir))
     call mkdir(expand(&undodir), "p", 0700)
 endif
@@ -61,7 +60,7 @@ call plug#end()
 " skin
 let g:airline_theme='bubblegum'
 " https://github.com/NLKNguyen/papercolor-theme:
-"set t_Co=256
+set t_Co=256
 let g:PaperColor_Theme_Options = {
   \   'theme': {
   \     'default.dark': {
