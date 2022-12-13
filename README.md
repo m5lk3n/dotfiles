@@ -38,19 +38,17 @@ sudo dnf install golang
 
 ## Installation
 
-To copy the dotfiles and configure the plugins, run the following:
+To copy all dotfiles and configure the plugins, run the following:
 
 ```bash
 make # run to show what happens when installing
-make install
+make all
 ```
 
 See [.vimrc](.vimrc) comments for more.
 
-### Z Shell
-
-To also install the `.zshrc` individually, run `make install-zshrc`.
-To install all dotfiles, run `make install-all`.
+To just install the `.vimrc` individually, run `make vimrc`.
+To just install the `.zshrc` individually, run `make zshrc`.
 
 ## Post-Installation Updates
 
