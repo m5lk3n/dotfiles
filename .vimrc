@@ -15,6 +15,7 @@ set backspace=indent,eol,start
 set scrolloff=2
 set history=1000
 set ttyfast
+set t_Co=256
 
 set wildmenu
 set wildmode=longest:full,full
@@ -53,6 +54,8 @@ call plug#begin()
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'maralla/completor.vim'
   Plug 'ap/vim-css-color'
+  Plug 'pseewald/vim-anyfold'
+  Plug 'arecarn/vim-fold-cycle'
   "TODO: Plug 'preservim/nerdcommenter'
   "TODO: Plug 'airblade/vim-gitgutter'
 call plug#end()
@@ -60,11 +63,14 @@ call plug#end()
 " skin
 let g:airline_theme='bubblegum'
 " https://github.com/NLKNguyen/papercolor-theme:
-set t_Co=256
+"set t_Co=256
+" color13 is used in NERDTree to highlight folders and files 
 let g:PaperColor_Theme_Options = {
   \   'theme': {
   \     'default.dark': {
   \       'override' : {
+  \         'folded_fg' : ['#7F8C8D', ''],
+  \         'folded_bg' : ['#616A6B', ''],
   \         'color13' : ['#FFFAFA', ''],
   \       }
   \     }
@@ -79,12 +85,23 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
-" Use <c-l> (or <C-ww) to re-focus editor
-" Start NERDTree when Vim is started without file arguments.
+" use <c-l> (or <C-ww) to re-focus editor
+" start NERDTree when Vim is started without file arguments
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
-" Enable Golang / LSP (gopls)
+" enable Golang / LSP (gopls)
 let g:completor_filetype_map = {}
 let g:completor_filetype_map.go = {'ft': 'lsp', 'cmd': 'gopls -remote=auto'}"
-" let g:go_doc_popup_window = 1
+"TODO: let g:go_doc_popup_window = 1
+
+" anyfold config from https://github.com/pseewald/vim-anyfold:
+" use zc to close, left/right arrow to open
+filetype plugin indent on
+autocmd Filetype * AnyFoldActivate
+set foldlevel=99
+
+" vim-fold-cycle config from https://github.com/arecarn/vim-fold-cycle:
+let g:fold_cycle_default_mapping = 0 "disable default mappings
+nmap <Tab><Tab> <Plug>(fold-cycle-open)
+nmap <S-Tab><S-Tab> <Plug>(fold-cycle-close)
