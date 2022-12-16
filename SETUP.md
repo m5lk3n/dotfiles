@@ -2,6 +2,8 @@
 
 ## Overclock
 
+**Disclaimer: Use at your own risk! This could damage your hardware!**
+
 Add the following snippet to `/boot/efi/config.txt`:
 
 ```bash

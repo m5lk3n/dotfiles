@@ -14,7 +14,7 @@ This setup also assumes tools like `curl` to be installed on the system. The exi
 
 ### Vim
 
-Vim 8+ with Python 3 support is required. To install on macOS with `brew`:
+Vim 8.2+ with Python 3 support is required. To install on macOS with `brew`:
 
 `brew install vim -vd protobuf`
 

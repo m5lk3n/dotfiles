@@ -93,7 +93,8 @@ autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " enable Golang / LSP (gopls)
 let g:completor_filetype_map = {}
 let g:completor_filetype_map.go = {'ft': 'lsp', 'cmd': 'gopls -remote=auto'}"
-"TODO: let g:go_doc_popup_window = 1
+" use K to read
+let g:go_doc_popup_window = 1
 
 " anyfold config from https://github.com/pseewald/vim-anyfold:
 " use zc to close, left/right arrow to open
