@@ -54,6 +54,11 @@ To just install the `.zshrc` individually, run `make zshrc`.
 
 **Don't forget** to run `:PlugInstall` in `vim` for plugin updates.
 
+## Bookmarks / Sources
+
+- [Configuring Vim to Develop Go Programs](https://medium.com/pragmatic-programmers/configuring-vim-to-develop-go-programs-e839641da4ac)
+- [My [josean-dev] Dev Environment Files](https://github.com/josean-dev/dev-environment-files)
+
 ## ARCHIVE
 
 - [setup protocol mint 21](archived/mint-21/SETUP.md)
