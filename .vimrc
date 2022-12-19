@@ -11,6 +11,7 @@ set smartindent
 set smartcase
 set nowrap
 set incsearch
+set hlsearch
 set backspace=indent,eol,start
 set scrolloff=2
 set history=1000
