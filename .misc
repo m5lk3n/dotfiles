@@ -1,0 +1,24 @@
+# alias
+if [[ -d ~/.oh-my-zsh/custom/plugins/zshmarks ]]; then
+  alias gomark="jump"
+  alias g="jump"
+  alias s="bookmark"
+  alias d="deletemark"
+  alias p="showmarks"
+  alias l="showmarks"
+fi
+alias ll="ls -la"
+alias vi="vim"
+
+# exports
+[[ -d $HOME/go/bin/ ]] && export PATH=$PATH:$HOME/go/bin/
+
+# functions
+function lama {
+  if which llama
+  then
+    cd "$(llama "$@")"
+  else
+    echo "llama not installed, see https://github.com/antonmedv/llama"
+  fi
+}

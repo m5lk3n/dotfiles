@@ -43,6 +43,13 @@ sudo btrfs filesystem resize max /
 
 ## Tooling
 
+### Z Shell Bookmarks
+
+```bash
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/jocelynmallon/zshmarks.git
+```
+
 ### Golang
 
 ```bash
@@ -53,5 +60,14 @@ sudo dnf install golang
 
 ```bash
 go install github.com/charmbracelet/glow@latest
+# optional if go/bin is part of PATH
 sudo cp ./go/bin/glow /usr/local/bin
-``` 
+```
+
+### Llama
+
+```bash
+go install github.com/antonmedv/llama@latest
+# optional if go/bin is part of PATH
+sudo cp ./go/bin/llama /usr/local/bin
+```

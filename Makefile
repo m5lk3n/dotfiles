@@ -12,7 +12,7 @@ help:
 	@echo "           to invoke vim plugin installation"
 	@echo
 	@echo "    zshrc  to back up ~/.zshrc to ~/.bak/.zshrc.<timestamp> (creates ~/.bak/ if needed) and"
-	@echo "           to copy this repo's .zshrc to ~"
+	@echo "           to copy this repo's .zshrc along with .misc to ~"
 	@echo
 	@echo "    all    to run all targets"
 	@echo
@@ -42,7 +42,7 @@ needs_zsh:
 # tasks
 .PHONY: zshrc
 zshrc: needs_zsh
-	@echo "############### BACKUP ###############" 
+	@echo "############ BACKUP .zshrc ############"
 	mkdir -p ~/.bak
 ifeq ($(shell test -s ~/.zshrc && echo -n yes),yes)
 	cp ~/.zshrc ~/.bak/.zshrc.${TIMESTAMP}
@@ -50,6 +50,7 @@ endif
 	@echo
 	@echo "############### INSTALL ###############"
 	cp .zshrc ~
+	cp .misc ~
 	@echo "==============> Done with zsh config, to activate: source ~/.zshrc"
 
 .PHONY: vimrc
