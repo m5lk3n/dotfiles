@@ -4,7 +4,7 @@
 
 This repo contains my current dotfiles that can be installed via `Makefile`.
 
-Personally, I use yet another Fedora 37 Workstation installation (e.g. [set up on my Pi 400](SETUP.md)) and macOS Ventura, both preferably with `zsh`. In addition to that, I use `bash` in different (cloud) environments for my work.
+Personally, I sometimes) use yet another Fedora 37 Workstation installation (e.g. [set up on my Pi 400](SETUP.md)) but mainly macOS Ventura, both preferably with `zsh`. In addition to that, I frequently use `bash` in different (cloud) environments for my work.
 
 The only common denominator is `vim`...
 
@@ -12,23 +12,43 @@ The only common denominator is `vim`...
 
 This setup also assumes tools like `curl` to be installed on the system. The existence of required tools is checked in the `Makefile`.
 
+Note: An existing `neovim` may break this `Makefile`'s dependency check. Please uninstall `neovim`; although I mean no disrespect here, you won't need it anymore anyway ;-)
+
+The `Makefile` setup (where applicable) was successfully tested on the following systems:
+
+- Macbook Pro M1, macOS Ventura (zsh)
+- Raspberry Pi 400, Fedora 37 Workstation (zsh)
+- Custom-built Asus Barebone-based solution, Linux Mint 21 (bash)
+- Google Cloudshell (bash) (SSH-connected, not via browser!)
+
 ### Vim
 
-Vim 8.2+ with Python 3 support is required. To install on macOS with `brew`:
+Vim 8.2+ with Python 3 support is required.
 
-`brew install vim -vd protobuf`
+To install on macOS with `brew`: `brew install vim -vd protobuf`
 
-On Fedora 37, it seems to be enough to just run the default installation:
+It seems to be enough to just run the default installation:
 
-`sudo dnf install vim`
+On Fedora 37: `sudo dnf install vim`
+
+On Mint 21: `sudo apt install vim`
 
 ### Golang
 
-Install `go` with `gopls` (19.3 in my case at the time of writing), e.g. on Fedora 37:
+Install `go` with `gopls` (19.3 in my case at the time of writing).
+
+On Fedora 37:
 
 ```bash
 sudo dnf install golang-x-tools-gopls
 sudo dnf install golang
+```
+
+On Mint 21:
+
+```bash
+sudo apt install golang
+sudo apt install gopls
 ```
 
 [Configuring Vim to Develop Go Programs](https://medium.com/pragmatic-programmers/configuring-vim-to-develop-go-programs-e839641da4ac):
@@ -48,7 +68,9 @@ make all
 See [.vimrc](.vimrc) comments for more.
 
 To just install the `.vimrc` individually, run `make vimrc`.
-To just install the `.zshrc` individually, run `make zshrc`.
+For `.zshrc` only, run `make zshrc`.
+
+Note: Especially when `.vimrc` is installed for the first time, it may take some time and the plug installer probably shows some errors - which are safe to ignore.
 
 ## Post-Installation Updates
 
