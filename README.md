@@ -4,7 +4,7 @@
 
 This repo contains my current dotfiles that can be installed via `Makefile`.
 
-Personally, I sometimes) use yet another Fedora 37 Workstation installation (e.g. [set up on my Pi 400](SETUP.md)) but mainly macOS Ventura, both preferably with `zsh`. In addition to that, I frequently use `bash` in different (cloud) environments for my work.
+Personally, I (sometimes) use yet another Fedora Workstation installation (e.g. [F38 set up on my netbook](netbook.md) or [F37 set up on my Pi 400](pi400.md)) but mainly macOS, both preferably with `zsh`. In addition to that, I frequently use `bash` in different (cloud) environments for my work.
 
 The only common denominator is `vim`...
 
@@ -17,7 +17,7 @@ Note: An existing `neovim` may break this `Makefile`'s dependency check. Please 
 The `Makefile` setup (where applicable) was successfully tested on the following systems:
 
 - Macbook Pro M1, macOS Ventura (zsh)
-- Raspberry Pi 400, Fedora 37 Workstation (zsh)
+- Raspberry Pi 400, Fedora Workstation 37 (zsh)
 - Custom-built Asus Barebone-based solution, Linux Mint 21 (bash)
 - Google Cloudshell (bash) (SSH-connected, not via browser!)
 
@@ -29,7 +29,7 @@ To install on macOS with `brew`: `brew install vim -vd protobuf`
 
 It seems to be enough to just run the default installation:
 
-On Fedora 37: `sudo dnf install vim`
+On Fedora 37/38: `sudo dnf install vim`
 
 On Mint 21: `sudo apt install vim`
 
@@ -37,7 +37,7 @@ On Mint 21: `sudo apt install vim`
 
 Install `go` with `gopls` (19.3 in my case at the time of writing).
 
-On Fedora 37:
+On Fedora 37/38:
 
 ```bash
 sudo dnf install golang-x-tools-gopls
