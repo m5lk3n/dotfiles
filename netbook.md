@@ -15,7 +15,7 @@ Here are my steps to install Fedora:
 
 ## Boot
 
-When the AMI logo appears, press DEL to enter the BIOS. Then choose the USB stick to boot from, save changes and boot.
+As a general remark, when the AMI logo appears, press DEL to enter the BIOS. Then choose the USB stick to boot from, save changes and boot.
 
 ### Boot menu
 
@@ -56,6 +56,8 @@ In `~/.bashrc`, I changed the theme to `powerline` (I didn't have to install a f
 ```bash
 source .bashrc
 ```
+
+Last, I installed Vim and Golang as per my [dotfiles](README.md) description.
 
 ## Key Bindings
 
