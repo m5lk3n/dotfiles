@@ -2,9 +2,11 @@
 
 In 08/2023 I installed [F38](https://download.fedoraproject.org/pub/fedora/linux/releases/38/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-38-1.6.iso) from a USB stick to this [Mini Laptop](https://liliputing.com/this-350-mini-laptop-has-an-8-inch-touchscreen-display-and-an-intel-n100-alder-lake-n-processor/) with an N100 CPU. 
 
+![Neofetch](neofetch-netbook.png)
+
 Initially, there were a few challenges:
-- Start-up: The live version didn't boot properly, it got stuck in a black screen during the start-up process.
-- Screen resolution: Only 800x600 was available in the live version. As soon as Fedora was installed on the local disk, the higher resolution (800x1280) became available.
+- Start-up: The Live version didn't boot properly, it got stuck in a black screen during the start-up process.
+- Screen resolution: Only 800x600 was available in the Live version. As soon as Fedora was installed on the local disk, the higher resolution (1280x800 / 800x1280) became available.
 - Screen rotation: Both, login screen and desktop weren't in landscape mode.
 - WiFi: The WiFi functionality was absent in the beginning, but became available after updating Fedora, i.e., I started on a wired connection.
 - Suspend: When suspended, the netbook didn't resume; I had to reboot.
@@ -24,7 +26,7 @@ Press `Ctrl+x` and wait for the (rotated) desktop to appear.
 
 ## Installation
 
-With a twisted head ;-), I ran the default installation.
+With a twisted head :wink:, I ran the default installation.
 
 After first start, I ran
 
@@ -35,7 +37,7 @@ sudo dnf upgrade
 
 Also, the higher resolution became available and I changed the desktop rotation via:
 
-  Settings -> Display -> Rotate *left* (that direction seemed counter-intuitive to me, I expected *right*)
+Settings :arrow_right: Display :arrow_right: Rotate *left* (that direction seemed counter-intuitive to me, I expected *right*)
 
 From that moment on, the desktop was in landscape mode.
 
