@@ -1,6 +1,6 @@
 # Setup Fedora Workstation 38 on an N100 Netbook
 
-In 08/2023 I installed [F38](https://download.fedoraproject.org/pub/fedora/linux/releases/38/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-38-1.6.iso) from a USB stick to this [Mini Laptop](https://liliputing.com/this-350-mini-laptop-has-an-8-inch-touchscreen-display-and-an-intel-n100-alder-lake-n-processor/) with an N100 CPU. 
+In 08/2023 I installed [F38](https://download.fedoraproject.org/pub/fedora/linux/releases/38/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-38-1.6.iso) from a USB stick to this [Mini Laptop](https://liliputing.com/this-350-mini-laptop-has-an-8-inch-touchscreen-display-and-an-intel-n100-alder-lake-n-processor/) with an N100 CPU.
 
 ![Neofetch](neofetch-netbook.png)
 
@@ -11,7 +11,7 @@ Initially, there were a few challenges:
 - WiFi: The WiFi functionality was absent in the beginning, but became available after updating Fedora, i.e., I started on a wired connection.
 - Suspend: When suspended, the netbook didn't resume; I had to reboot.
 
-Here are my steps:
+Here are my steps to install Fedora:
 
 ## Boot
 
@@ -19,8 +19,8 @@ When the AMI logo appears, press DEL to enter the BIOS. Then choose the USB stic
 
 ### Boot menu
 
-In order to start the Live version successfully, press `e` for the default boot option. Modify the boot option by replacing "quiet splash" with "nomodeset". 
-Press `Ctrl+x` and wait for the (rotated) desktop to appear. 
+In order to start the Live version successfully, press `e` for the default boot option in the menu. Modify the boot option by replacing "quiet splash" with "nomodeset". 
+Press `Ctrl+x` and wait for the (rotated) installation desktop to appear. 
 
 (My [source](https://linuxmint-installation-guide.readthedocs.io/en/latest/boot_options.html) of inspiration.)
 
@@ -43,7 +43,7 @@ From that moment on, the desktop was in landscape mode.
 
 [This](https://forums.fedoraforum.org/showthread.php?322546-How-to-rotate-Gnome-login-screen-to-vertical-position) explains how to rotate the login screen as well. 
 
-Next, I went through [17 Things to Do After Installing Fedora 38](https://itsfoss.com/things-to-do-after-installing-fedora/) and picked what I needed.
+Next, I went through [17 Things to Do After Installing Fedora 38](https://itsfoss.com/things-to-do-after-installing-fedora/) and picked what I needed. As far as "11. Screen Lock and Power Settings" goes, I chose "Screen Blank" after 10 minutes with "Automatic Suspend" set to "Off" (I've not managed to get the resume to work). ("12. Use Night Light Settings" was unavailable for me.)
 
 Then, I added "Oh My Bash":
 
@@ -51,7 +51,7 @@ Then, I added "Oh My Bash":
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
 
-In `~/.bashrc`, I changed the theme to `powerline` and completed this part of the installatio with:
+In `~/.bashrc`, I changed the theme to `powerline` (I didn't have to install a font) and completed this part of the installation with:
 
 ```bash
 source .bashrc
@@ -59,12 +59,14 @@ source .bashrc
 
 ## Key Bindings
 
-- Out of the box, `Fn+Win+Cursor up/down` changes the workspace
+- Out of the box,
+  - `Fn+Win+Cursor up/down` changes the workspace
+  - `Win+l` locks the screen (and blanks it)
 - As per [this](https://docs.fedoraproject.org/en-US/quick-docs/proc_setting-key-shortcut/) description, I added
   - `Ctrl+Alt+t` to start a terminal
   - `Ctrl+Alt+b` to start Firefox
 
-## Outlook
+## Misc.
 
 I've successfully set up 2FA for the GNOME environment thanks to [How to set up 2FA for user login](https://discussion.fedoraproject.org/t/how-to-set-up-2fa-for-user-login/82433/2) by copying the generated `~/.google_authenticator` under `/var/lib/google-authenticator`.
 ([Enabling 2FA on RHEL 8 using Google Authenticator](https://ins3cure.com/enabling-2fa-on-rhel8/) might also be a good (and still valid) source of inspiration.)
