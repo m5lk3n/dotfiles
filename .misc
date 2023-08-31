@@ -14,11 +14,11 @@ alias vi="vim"
 [[ -d $HOME/go/bin/ ]] && export PATH=$PATH:$HOME/go/bin/
 
 # functions
-function lama {
-  if which llama
+function lk {
+  if which walk
   then
-    cd "$(llama "$@")"
+    cd "$(walk "$@")"
   else
-    echo "llama not installed, see https://github.com/antonmedv/llama"
+    echo "walk not installed, see https://github.com/antonmedv/walk"
   fi
 }
