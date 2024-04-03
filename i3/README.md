@@ -6,22 +6,24 @@ Install [Linux Mint 21.3 Cinnamon Edition](https://www.linuxmint.com/edition.php
 
 First Steps
 -> Desktop Colors -> Launch:
+
   Choose Dark
+
   -> Advanced settings:
+
      Mouse Pointer: Adwaita
+
      Applications, Icons, Desktop: Mint-Y-Dark-Aqua
 
 -> System Settings -> Launch:
+
    Mouse and Touchpad -> Touchpad: Reverse scrolling direction
 
-```
-sudo apt remove thunderbird
-sudo apt remove libreoffice-*
-```
+`sudo apt remove thunderbird libreoffice-*`
 
 ```
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 ```
 
 `sudo apt install git i3 lxappearance nitrogen compton rofi gimp`
@@ -29,7 +31,9 @@ sudo apt upgrade
 log out, choose i3, log in
 
 `lxappearance` 
+
 -> Widget: Mint-Y-Dark-Aqua
+
 -> Icon Theme: Mint-Y-Aqua
 
 ```
@@ -38,9 +42,12 @@ curl https://petapixel.com/assets/uploads/2021/11/LoneCypressSunsetalt5K-scaled.
 ```
 
 Start terminal
+
 -> Preferences
+
   -> Text: Custom font: Monospace 12
-  -> Colors: Use transparent background
+
+  -> ~~Colors: Use transparent background~~
 
 ```
 mkdir .config/i3status
