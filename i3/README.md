@@ -4,20 +4,16 @@
 
 Install [Linux Mint 21.3 Cinnamon Edition](https://www.linuxmint.com/edition.php?id=311).
 
-First Steps
--> Desktop Colors -> Launch:
-
-  Choose Dark
-
-  -> Advanced settings:
-
-     Mouse Pointer: Adwaita
-
-     Applications, Icons, Desktop: Mint-Y-Dark-Aqua
-
--> System Settings -> Launch:
-
-   Mouse and Touchpad -> Touchpad: Reverse scrolling direction
+```
+# First Steps
+# -> Desktop Colors -> Launch:
+#    Choose Dark
+#    -> Advanced settings:
+#       Mouse Pointer: Adwaita
+#       Applications, Icons, Desktop: Mint-Y-Dark-Aqua
+# -> System Settings -> Launch:
+#    Mouse and Touchpad -> Touchpad: Reverse scrolling direction
+```
 
 `sudo apt remove thunderbird libreoffice-*`
 
@@ -30,24 +26,23 @@ sudo apt upgrade -y
 
 log out, choose i3, log in
 
-`lxappearance` 
-
--> Widget: Mint-Y-Dark-Aqua
-
--> Icon Theme: Mint-Y-Aqua
+```
+lxappearance
+# -> Widget: Mint-Y-Dark-Aqua
+# -> Icon Theme: Mint-Y-Aqua
+```
 
 ```
 mkdir -p ~/Pictures/wallpapers"
 curl https://petapixel.com/assets/uploads/2021/11/LoneCypressSunsetalt5K-scaled.jpeg > ~/Pictures/wallpapers/current.jpg
 ```
 
-Start terminal
-
--> Preferences
-
-  -> Text: Custom font: Monospace 12
-
-  -> ~~Colors: Use transparent background~~
+```
+# Start terminal
+# -> Preferences
+#    -> Text: Custom font: Monospace 12
+#    -> Colors: Use transparency from system theme
+```
 
 ```
 mkdir .config/i3status
@@ -61,3 +56,5 @@ TBC
 - `bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"`
 - install code
 - install chrome (?)
+
+- restart i3

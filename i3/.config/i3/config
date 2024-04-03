@@ -201,12 +201,17 @@ bindsym Control+$mod+l exec "i3lock -c 000000"
 # auto lock the screen after 5mins
 exec "xautolock -detectsleep -time 5 -locker \"i3lock -c 000000\""
 
+mode "Exit" {
+	bindsym l exec i3-msg exit
+	bindsym r exec systemctl -i reboot
+	bindsym s exec systemctl -i poweroff
+	bindsym e mode "default"; exec pkill -15 nagbar
+	bindsym Escape mode "default"; exec pkill -15 nagbar
+}
+
 bindsym $mod+Shift+e mode "Exit"; exec i3-nagbar \
         -t warning \
         -m '❕ SESSION EXIT OPTIONS' \
         -B '❌ [L]ogout'        'i3-msg exit' \
         -B '🌀️ [R]estart'       'systemctl -i reboot' \
         -B '⚡️ [S]hutdown'      'systemctl -i poweroff'
-
-
-
