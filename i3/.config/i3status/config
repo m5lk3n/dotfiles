@@ -1,0 +1,30 @@
+# https://i3wm.org/docs/i3status.html
+general {
+	separator = ""
+        colors = true
+	# https://github.com/morhetz/gruvbox
+	color_good =     '#b8bb26'  
+    	color_degraded = '#fabd2f'  
+    	color_bad =      '#fb4934'  
+	interval = 60
+}
+
+order += "battery all"
+order += "volume master"
+order += "tztime local"
+
+battery all {
+        format = " %percentage" # "%status %percentage %remaining"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+tztime local {
+        format = " %d-%m-%Y %H:%M"
+}
