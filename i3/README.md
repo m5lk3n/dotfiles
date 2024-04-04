@@ -56,9 +56,15 @@ source ~/.bashrc
 
 Install [Visual Studio Code on Linux](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions)
 
+Copy this repo's i3 config files in your profile: `cp -r .config/ ~/.config`
+
 Restart i3.
 
 ## Bookmarks
 
 - [i3 Reference Card](https://i3wm.org/docs/refcard.html)
 - [i3 User’s Guide](https://i3wm.org/docs/userguide.html)
+
+---
+
+- [Sample i3-gaps-config](https://raw.githubusercontent.com/TylerWolfDev/i3-gaps-config/master/config)
