@@ -1,7 +1,5 @@
 # How to install and configure i3 on Linux Mint 21.3 Cinnamon Edition
 
-**AT WORK**
-
 Install [Linux Mint 21.3 Cinnamon Edition](https://www.linuxmint.com/edition.php?id=311).
 
 ```
@@ -22,9 +20,9 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-`sudo apt install git i3 lxappearance nitrogen compton rofi gimp`
+`sudo apt install git i3 lxappearance nitrogen compton rofi golang gopls gimp chromium`
 
-log out, choose i3, log in
+Log out, choose i3, log in.
 
 ```
 lxappearance
@@ -56,17 +54,9 @@ vi ~/.bashrc # OSH_THEME="powerline"
 source ~/.bashrc
 ```
 
-- [Visual Studio Code on Linux](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions)
+Install [Visual Studio Code on Linux](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions)
 
-`sudo apt install golang gopls`
-
-TBC
-
-**TODO**
-
-- install chrome (?)
-
-- restart i3
+Restart i3.
 
 ## Bookmarks
 
