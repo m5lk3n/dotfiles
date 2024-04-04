@@ -43,11 +43,6 @@ curl https://petapixel.com/assets/uploads/2021/11/LoneCypressSunsetalt5K-scaled.
 ```
 
 ```
-mkdir .config/i3status
-curl https://raw.githubusercontent.com/m5lk3n/dotfiles/main/archived/i3gaps/i3status/config > .config/i3status/config
-```
-
-```
 sudo apt install powerline
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 vi ~/.bashrc # OSH_THEME="powerline"
@@ -56,9 +51,21 @@ source ~/.bashrc
 
 Install [Visual Studio Code on Linux](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions)
 
-Copy this repo's i3 config files in your profile: `cp -r .config/ ~/.config`
+Copy this repo's i3 config files in your profile: `cp -r .config/ ~`
 
 Restart i3.
+
+```
+rofi-theme-selector
+# -> Arc-Dark -> Enter -> Alt+a
+```
+
+```
+chromium
+# Settings -> Appearance -> Use GTK
+```
+
+Restart machine (or just `dunst` and maybe others...).
 
 ## Bookmarks
 
