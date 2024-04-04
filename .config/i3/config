@@ -191,6 +191,7 @@ assign [class="Gimp"] $ws4
 
 exec --no-startup-id nitrogen --set-scaled /home/michael/Pictures/wallpapers/current.jpg
 exec --no-startup-id compton
+exec --no-startup-id dunst
 
 # https://gist.github.com/rometsch/6b35524bcc123deb7cd30b293f2088d8:
 # keybinding to lock screen

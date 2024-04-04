@@ -4,7 +4,11 @@
 
 This repo contains my current dotfiles that can be installed via `Makefile`.
 
-Personally, I (sometimes) use yet another Fedora Workstation installation (e.g. [F38 set up on my netbook](netbook.md) or [F37 set up on my Pi 400](pi400.md)) but mainly macOS, both preferably with `zsh`. In addition to that, I frequently use `bash` in different (cloud) environments for my work.
+Personally, I use
+- (sometimes) yet another Fedora Workstation installation (e.g. [F38 set up on my netbook](netbook.md) or [F37 set up on my Pi 400](pi400.md))
+- a [Mint 21-based i3 setup](i3.md)
+- but mainly macOS, both preferably with `zsh`.
+In addition to that, I frequently use `bash` in different (cloud) environments for my work.
 
 The only common denominator is `vim`...
 
