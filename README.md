@@ -16,13 +16,13 @@ The only common denominator is `vim`...
 
 This setup also assumes tools like `curl` to be installed on the system. The existence of required tools is checked in the `Makefile`.
 
-Note: An existing `neovim` may break this `Makefile`'s dependency check. Please uninstall `neovim`; although I mean no disrespect here, you won't need it anymore anyway ;-)
+Note: An existing `neovim` breaks this `Makefile`'s dependency check. Please uninstall `neovim`; although I mean no disrespect here, you won't need it anymore anyway: `sudo apt remove neovim`
 
 The `Makefile` setup (where applicable) was successfully tested on the following systems:
 
 - Macbook Pro M1, macOS Ventura (zsh)
 - Raspberry Pi 400, Fedora Workstation 37 (zsh)
-- Custom-built Asus Barebone-based solution, Linux Mint 21 (bash)
+- Custom-built Asus Barebone-based solution + Lenovo Thinkpad X201 and X250, Linux Mint 21 (bash)
 - Google Cloudshell (bash) (SSH-connected, not via browser!)
 
 ### Vim
