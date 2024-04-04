@@ -183,7 +183,7 @@ bar {
 default_border pixel 1
 default_floating_border pixel 1
 
-assign [class="Chrome-browser"] $ws1
+assign [class="Chromium-browser"] $ws1
 assign [class="firefox"] $ws1
 assign [class="Gnome-terminal"] $ws2
 assign [class="Code"] $ws3
