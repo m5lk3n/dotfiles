@@ -49,12 +49,26 @@ mkdir .config/i3status
 curl https://raw.githubusercontent.com/m5lk3n/dotfiles/main/archived/i3gaps/i3status/config > .config/i3status/config
 ```
 
+```
+sudo apt install powerline
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+vi ~/.bashrc # OSH_THEME="powerline"
+source ~/.bashrc
+```
+
+- [Visual Studio Code on Linux](https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions)
+
+`sudo apt install golang gopls`
+
 TBC
 
 **TODO**
 
-- `bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"`
-- install code
 - install chrome (?)
 
 - restart i3
+
+## Bookmarks
+
+- [i3 Reference Card](https://i3wm.org/docs/refcard.html)
+- [i3 User’s Guide](https://i3wm.org/docs/userguide.html)
