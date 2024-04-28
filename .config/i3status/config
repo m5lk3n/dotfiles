@@ -9,9 +9,16 @@ general {
 	interval = 60
 }
 
+order += "cpu_temperature 1"
 order += "battery all"
 order += "volume master"
 order += "tztime local"
+
+cpu_temperature 1 {
+        format = "🌡%degrees°C"
+        max_threshold = 95
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp3_input"
+}
 
 battery all {
         format = " 🔋%percentage " # "%status %percentage %remaining"
@@ -19,7 +26,7 @@ battery all {
 
 volume master {
         format = "🔊%volume "
-        format_muted = " 🔊 muted (%volume) "
+        format_muted = "🔈%volume "
         device = "default"
         mixer = "Master"
         mixer_idx = 0
