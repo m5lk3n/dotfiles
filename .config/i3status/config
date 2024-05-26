@@ -17,7 +17,7 @@ order += "tztime local"
 cpu_temperature 1 {
         format = "🌡%degrees°C"
         max_threshold = 95
-        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp3_input"
+        path = "/sys/devices/platform/thinkpad_hwmon/hwmon/hwmon3/temp1_input" # CPU on my X201, adjust as needed
 }
 
 battery all {
