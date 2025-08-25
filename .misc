@@ -1,0 +1,8 @@
+alias vi='nvim'
+alias ls='eza -lhg --group-directories-first --icons=auto'
+alias ll='spf "$PWD"'
+alias pcp='pcopy copy'
+alias ppaste='pcopy paste'
+
+export PATH=$PATH:$HOME/go/bin:$HOME/flutter/bin
+export CHROME_EXECUTABLE=/usr/bin/chromium
