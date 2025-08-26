@@ -17,6 +17,8 @@ sed -i "s/^metadata = .*/metadata = true/" "$SPF_CONFIG"
 # Go and tools requiring Go
 sudo pacman -S go
 go install heckel.io/pcopy@latest
+go install github.com/cheat/cheat/cmd/cheat@latest
+cp .config/cheat/* ~/.config/cheat/
 
 # prepare Flutter installation
 sudo pacman -S glu cmake ninja mesa-utils
