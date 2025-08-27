@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # TODOs
-# - check run as user
-# - show warning, ask for confirmation
+# - check run as user, check for existence of .bashrc, .config/hypr/hyprland.conf
+# - show warning, ask for confirmation to overwrite
+# - [back up .bashrc, .config/hypr/hyprland.conf]
 
 # Superfile
 sudo pacman -S superfile exiftool
