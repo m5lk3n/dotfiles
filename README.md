@@ -6,10 +6,5 @@
 
 ## To do
 
-- `sudo usermod -a -G docker $USER`
 - librewolf: `privacy.resistFingerprinting`
-- Uninstall (most) GUI and Commercial GUI apps
-
-## Post Installation Steps
-
-- `flutter --disable-analytics`
+- remove typora config?

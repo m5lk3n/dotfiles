@@ -16,7 +16,7 @@ sed -i "s/^cd_on_quit = .*/cd_on_quit = true/" "$SPF_CONFIG"
 sed -i "s/^metadata = .*/metadata = true/" "$SPF_CONFIG"
 
 # Go and tools requiring Go
-sudo pacman -S go
+mise go # sudo pacman -S go
 go install heckel.io/pcopy@latest
 go install github.com/cheat/cheat/cmd/cheat@latest
 cp .config/cheat/* ~/.config/cheat/
