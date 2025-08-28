@@ -25,6 +25,8 @@ cp .config/cheat/* ~/.config/cheat/
 sudo pacman -S glu cmake ninja mesa-utils
 ## TODO: install Flutter and Android Studio
 
+# TODO: install code
+
 # misc
 sudo pacman -S librewolf ncdu signal-desktop
 cp .misc ~/
@@ -36,6 +38,3 @@ wget https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linu
 ## no gaps
 echo "source = ~/.config/hypr/looknfeel.conf" >> ~/.config/hypr/hyprland.conf
 cp .config/hypr/*.conf ~/.config/hypr/
-## prompt
-## TODO: see ~/.config/starship.toml
-### adopt https://starship.rs/presets/toml/tokyo-night.toml
