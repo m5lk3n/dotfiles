@@ -20,3 +20,12 @@ omarchy-webapp-remove \
     "Google Messages" \
     "X" \
     "Zoom"
+
+## default install config left-overs
+rm -rf ~/.config/libreoffice
+rm -rf ~/.config/xournalpp
+rm -rf ~/.config/Typora
+rm -rf ~/.local/share/omarchy/config/Typora
+rm -rf ~/.local/share/omarchy/applications/typora.desktop
+rm -rf ~/.local/share/applications/typora.desktop
+rm -rf ~/.local/share/applications/dropbox.desktop

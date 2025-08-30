@@ -5,13 +5,12 @@ if [ "$EUID" -eq 0 ]; then
   exit 1
 fi
 
-if [ ! -f "$HOME/.bashrc" ]; then
-    echo "$HOME/.bashrc does not exist."
+if [ ! -f "~/.bashrc" ]; then
+    echo "~/.bashrc does not exist."
     exit 1
 fi
-
-if [ ! -f "$HOME/.config/hypr/hyprland.conf" ]; then
-    echo "$HOME/.config/hypr/hyprland.conf does not exist."
+if [ ! -f "~/.config/hypr/hyprland.conf" ]; then
+    echo "~/.config/hypr/hyprland.conf does not exist."
     exit 1
 fi
 
@@ -26,6 +25,9 @@ TS=$(date +%Y%m%d-%H%M%S)
 cp ~/.bashrc ~/.bashrc.bak-$TS
 cp ~/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.bak-$TS
 
+echo "" >> ~/.bashrc
+echo "# from https://github.com/m5lk3n/dotfiles:" >> ~/.bashrc
+
 # Superfile
 sudo pacman -Syu --noconfirm --needed superfile exiftool
 cp .spf ~/
@@ -37,35 +39,22 @@ mkdir -p ~/$SPF_THEME_DIR
 cp $SPF_CONFIG_DIR/config.toml ~/$SPF_CONFIG_DIR
 cp $SPF_THEME_DIR/tokyonight.toml ~/$SPF_THEME_DIR
 
-# Go and tools requiring Go
-sudo pacman -Syu --noconfirm --needed go
+# dev setup (WORK IN PROGRESS)
+sudo pacman -Syu --noconfirm --needed cmake ninja mesa-utils go flutter android-studio visual-studio-code-bin
+sudo usermod -a -G flutter $USER
+flutter --disable-analytics
+## tools requiring Go
 go install heckel.io/pcopy@latest # "build at" info is missing
 go install github.com/cheat/cheat/cmd/cheat@latest
 CHEAT_CONFIG_DIR=.config/cheat/cheatsheets/personal
 mkdir -p ~/$CHEAT_CONFIG_DIR
 cp -r $CHEAT_CONFIG_DIR/* ~/$CHEAT_CONFIG_DIR
 
-# prepare Flutter installation
-sudo pacman -Syu --noconfirm --needed cmake ninja mesa-utils flutter
-sudo usermod -a -G flutter $USER
-flutter --disable-analytics
-
-## TODO: install Android Studio
-
-## TODO: install code
-
 # misc
 sudo pacman -Syu --noconfirm --needed librewolf ncdu
-librewolf --setDefaultBrowser --version
 cp .misc ~/
 echo "source .misc" >> ~/.bashrc
-
-rm -rf ~/.config/libreoffice
-rm -rf ~/.config/Typora
-rm -rf ~/.local/share/omarchy/config/Typora
-rm -rf ~/.local/share/omarchy/applications/typora.desktop
-
-# configure
+cp .config/alacritty/alacritty.toml ~/.config/alacritty
 ## desktop wallpaper
 curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o ~/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg
 ## no gaps
