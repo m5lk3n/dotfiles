@@ -9,6 +9,8 @@ echo "- Cycle through the wallpapers with SUPER CTRL + SPACE until the custom on
 echo "- Set up Fido"
 echo "- Set up Web Apps"
 echo ""
-echo "You may need to restart/relogin for some changes to take effect."
+echo "You need to"
+echo "- restart/relogin for some changes to take effect."
+echo "- change the Omarchy theme forth and back to Tokyo Night for window decorations to apply!"
 
 librewolf --setDefaultBrowser

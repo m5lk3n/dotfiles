@@ -31,7 +31,7 @@ echo "# from https://github.com/m5lk3n/dotfiles:" >> ~/.bashrc
 # Superfile
 sudo pacman -Syu --noconfirm --needed superfile exiftool
 cp .spf ~/
-echo "source .spf" >> ~/.bashrc
+echo "source ~/.spf" >> ~/.bashrc
 ## https://superfile.netlify.app/configure/superfile-config/
 SPF_CONFIG_DIR=.config/superfile
 SPF_THEME_DIR=$SPF_CONFIG_DIR/theme
@@ -53,7 +53,7 @@ cp -r $CHEAT_CONFIG_DIR/* ~/$CHEAT_CONFIG_DIR
 # misc
 sudo pacman -Syu --noconfirm --needed librewolf ncdu
 cp .misc ~/
-echo "source .misc" >> ~/.bashrc
+echo "source ~/.misc" >> ~/.bashrc
 cp .config/alacritty/alacritty.toml ~/.config/alacritty
 ## desktop wallpaper
 curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o ~/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg

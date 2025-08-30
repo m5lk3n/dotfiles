@@ -12,7 +12,7 @@ My opinionated [Omarchy 2.0](https://omarchy.org/) setup.
 
 **- Modifies configuration files!** (only `~/.bashrc` and `hyprland.conf` are backed up)
 
-**- Installs and uninstalls packages**
+**- Installs and uninstalls packages!**
 
 **- Has no uninstall!**
 
