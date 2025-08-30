@@ -13,7 +13,7 @@ echo "source .spf" >> ~/.bashrc
 SPF_CONFIG_DIR=.config/superfile
 SPF_THEME_DIR=$SPF_CONFIG_DIR/theme
 mkdir -p ~/$SPF_THEME_DIR
-cp $SPF_CONFIG_DIR/config.toml $SPF_CONFIG_DIR
+cp $SPF_CONFIG_DIR/config.toml ~/$SPF_CONFIG_DIR
 cp $SPF_THEME_DIR/tokyonight.toml ~/$SPF_THEME_DIR
 
 # Go and tools requiring Go
