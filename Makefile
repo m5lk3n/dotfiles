@@ -10,13 +10,9 @@ help:
 ## setup: install dotfiles & packages, configure system, remove unwanted stuff
 .PHONY: setup
 setup:
-	@echo "AT WORK"
-#	@echo "Running install..."
-#	@./install.sh
-#	@echo "Running postinstall..."
-#	@./postinstall.sh
-#	@echo "Running uninstall-defaults..."
-#	@./uninstall-defaults.sh
-#	@echo "Done!"
-#	@echo ""
-#	@echo "Next: Set up Fido manually..."
+	@echo "Running setup..."
+	@./setup.sh
+	@echo "Running uninstall-defaults..."
+	@./uninstall-defaults.sh
+	@echo "Running postsetup..."
+	@./postsetup.sh

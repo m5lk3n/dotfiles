@@ -6,5 +6,4 @@
 
 ## To do
 
-- librewolf: `privacy.resistFingerprinting`
 - remove typora config?

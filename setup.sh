@@ -25,19 +25,24 @@ mkdir -p ~/$CHEAT_CONFIG_DIR
 cp -r $CHEAT_CONFIG_DIR/* ~/$CHEAT_CONFIG_DIR
 
 # prepare Flutter installation
-sudo pacman -Syu --noconfirm --needed cmake ninja mesa-utils
-## TODO: install Flutter and Android Studio
+sudo pacman -Syu --noconfirm --needed cmake ninja mesa-utils flutter
+sudo usermod -a -G flutter $USER
+flutter --disable-analytics
 
-# TODO: install code
+## TODO: install Android Studio
 
-# miscs
+## TODO: install code
+
+# misc
 sudo pacman -Syu --noconfirm --needed librewolf ncdu
+librewolf --setDefaultBrowser --version
 cp .misc ~/
 echo "source .misc" >> ~/.bashrc
+## TODO: fix librewolf window style
 
 # configure
 ## desktop wallpaper
 curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o ~/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg
 ## no gaps
-echo "source = ~/.config/hypr/looknfeel.conf" >> ~/.config/hypr/hyprland.conf
 cp .config/hypr/*.conf ~/.config/hypr/
+echo "source = ~/.config/hypr/looknfeel.conf" >> ~/.config/hypr/hyprland.conf

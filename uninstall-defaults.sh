@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # see omarchy/Install/packages.sh
-sudo pacman -Rns \
+sudo pacman -Rns --noconfirm --needed \
     1password-beta \
     1password-cli \
     kdenlive \
