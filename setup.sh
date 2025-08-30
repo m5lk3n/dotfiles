@@ -1,9 +1,30 @@
 #!/bin/bash
 
-# TODOs
-# - check run as user, check for existence of .bashrc, .config/hypr/hyprland.conf
-# - show warning, ask for confirmation to overwrite
-# - [back up .bashrc, .config/hypr/hyprland.conf]
+if [ "$EUID" -eq 0 ]; then
+  echo "Please do not run as root."
+  exit 1
+fi
+
+if [ ! -f "$HOME/.bashrc" ]; then
+    echo "$HOME/.bashrc does not exist."
+    exit 1
+fi
+
+if [ ! -f "$HOME/.config/hypr/hyprland.conf" ]; then
+    echo "$HOME/.config/hypr/hyprland.conf does not exist."
+    exit 1
+fi
+
+read -p "This will overwrite ~/.bashrc and ~/.config/hypr/hyprland.conf. Both files will be backed up. Continue? [y/N]: " confirm
+if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
+    echo "Aborted."
+    exit 1
+fi
+
+# back up files before overwriting
+TS=$(date +%Y%m%d-%H%M%S)
+cp ~/.bashrc ~/.bashrc.bak-$TS
+cp ~/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.bak-$TS
 
 # Superfile
 sudo pacman -Syu --noconfirm --needed superfile exiftool
@@ -38,7 +59,6 @@ sudo pacman -Syu --noconfirm --needed librewolf ncdu
 librewolf --setDefaultBrowser --version
 cp .misc ~/
 echo "source .misc" >> ~/.bashrc
-## TODO: fix librewolf window style
 
 # configure
 ## desktop wallpaper
