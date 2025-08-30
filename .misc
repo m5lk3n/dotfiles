@@ -1,6 +1,6 @@
 alias vi='nvim'
 alias ls='eza -lhg --group-directories-first --icons=auto'
-alias ll='spf "$PWD"'
+alias ll='spf --fh --fch "$PWD"'
 alias pcp='pcopy copy'
 alias ppaste='pcopy paste'
 

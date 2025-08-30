@@ -6,29 +6,30 @@
 # - [back up .bashrc, .config/hypr/hyprland.conf]
 
 # Superfile
-sudo pacman -S superfile exiftool
+sudo pacman -Syu --noconfirm --needed superfile exiftool
 cp .spf ~/
 echo "source .spf" >> ~/.bashrc
 ## https://superfile.netlify.app/configure/superfile-config/
-SPF_CONFIG=~/.config/superfile/config.toml
-sed -i "s/^theme = .*/theme = 'tokyonight'/" "$SPF_CONFIG"
-sed -i "s/^cd_on_quit = .*/cd_on_quit = true/" "$SPF_CONFIG"
-sed -i "s/^metadata = .*/metadata = true/" "$SPF_CONFIG"
+SPF_CONFIG_DIR=.config/superfile
+SPF_THEME_DIR=$SPF_CONFIG_DIR/theme
+mkdir -p ~/$SPF_THEME_DIR
+cp $SPF_CONFIG_DIR/config.toml $SPF_CONFIG_DIR
+cp $SPF_THEME_DIR/tokyonight.toml ~/$SPF_THEME_DIR
 
 # Go and tools requiring Go
-mise go # sudo pacman -S go
+mise go # sudo pacman -Syu --noconfirm --needed go
 go install heckel.io/pcopy@latest
 go install github.com/cheat/cheat/cmd/cheat@latest
 cp .config/cheat/* ~/.config/cheat/
 
 # prepare Flutter installation
-sudo pacman -S glu cmake ninja mesa-utils
+sudo pacman -Syu --noconfirm --needed glu cmake ninja mesa-utils
 ## TODO: install Flutter and Android Studio
 
 # TODO: install code
 
-# misc
-sudo pacman -S librewolf ncdu signal-desktop
+# miscs
+sudo pacman -Syu --noconfirm --needed librewolf ncdu signal-desktop
 cp .misc ~/
 echo "source .misc" >> ~/.bashrc
 
