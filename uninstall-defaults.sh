@@ -4,9 +4,8 @@
 sudo pacman -Rns \
     1password-beta \
     1password-cli \
-    dropbox \
     kdenlive \
-    libreoffice \
+    libreoffice-fresh \
     localsend \
     mpv \
     obs-studio \
@@ -15,7 +14,7 @@ sudo pacman -Rns \
     typora
 
 # see omarchy/Install/packaging/webapps.sh
-bin/omarchy-webapp-remove \
+omarchy-webapp-remove \
     "Basecamp" \
     "Google Messages" \
     "X" \

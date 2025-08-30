@@ -17,25 +17,27 @@ cp $SPF_CONFIG_DIR/config.toml ~/$SPF_CONFIG_DIR
 cp $SPF_THEME_DIR/tokyonight.toml ~/$SPF_THEME_DIR
 
 # Go and tools requiring Go
-mise go # sudo pacman -Syu --noconfirm --needed go
-go install heckel.io/pcopy@latest
+sudo pacman -Syu --noconfirm --needed go
+go install heckel.io/pcopy@latest # "build at" info is missing
 go install github.com/cheat/cheat/cmd/cheat@latest
-cp .config/cheat/* ~/.config/cheat/
+CHEAT_CONFIG_DIR=.config/cheat/cheatsheets/personal
+mkdir -p ~/$CHEAT_CONFIG_DIR
+cp -r $CHEAT_CONFIG_DIR/* ~/$CHEAT_CONFIG_DIR
 
 # prepare Flutter installation
-sudo pacman -Syu --noconfirm --needed glu cmake ninja mesa-utils
+sudo pacman -Syu --noconfirm --needed cmake ninja mesa-utils
 ## TODO: install Flutter and Android Studio
 
 # TODO: install code
 
 # miscs
-sudo pacman -Syu --noconfirm --needed librewolf ncdu signal-desktop
+sudo pacman -Syu --noconfirm --needed librewolf ncdu
 cp .misc ~/
 echo "source .misc" >> ~/.bashrc
 
 # configure
 ## desktop wallpaper
-wget https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -O ~/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg
+curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o ~/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg
 ## no gaps
 echo "source = ~/.config/hypr/looknfeel.conf" >> ~/.config/hypr/hyprland.conf
 cp .config/hypr/*.conf ~/.config/hypr/
