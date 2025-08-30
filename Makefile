@@ -15,8 +15,8 @@ setup:
 #	@./install.sh
 #	@echo "Running postinstall..."
 #	@./postinstall.sh
-#	@echo "Running uninstall..."
-#	@./uninstall.sh
+#	@echo "Running uninstall-defaults..."
+#	@./uninstall-defaults.sh
 #	@echo "Done!"
 #	@echo ""
 #	@echo "Next: Set up Fido manually..."
