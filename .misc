@@ -5,4 +5,4 @@ alias pcp='pcopy copy'
 alias ppaste='pcopy paste'
 
 export PATH=$PATH:$HOME/go/bin:$HOME/flutter/bin
-export CHROME_EXECUTABLE=/usr/bin/chromium
+export CHROME_EXECUTABLE=/usr/bin/chromium # for Flutter web

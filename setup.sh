@@ -60,6 +60,11 @@ librewolf --setDefaultBrowser --version
 cp .misc ~/
 echo "source .misc" >> ~/.bashrc
 
+rm -rf ~/.config/libreoffice
+rm -rf ~/.config/Typora
+rm -rf ~/.local/share/omarchy/config/Typora
+rm -rf ~/.local/share/omarchy/applications/typora.desktop
+
 # configure
 ## desktop wallpaper
 curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o ~/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg
