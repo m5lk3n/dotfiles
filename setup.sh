@@ -5,16 +5,16 @@ if [ "$EUID" -eq 0 ]; then
   exit 1
 fi
 
-if [ ! -f "~/.bashrc" ]; then
-    echo "~/.bashrc does not exist."
+if [ ! -f "${HOME}/.bashrc" ]; then
+    echo "${HOME}/.bashrc does not exist."
     exit 1
 fi
-if [ ! -f "~/.config/hypr/hyprland.conf" ]; then
-    echo "~/.config/hypr/hyprland.conf does not exist."
+if [ ! -f "${HOME}/.config/hypr/hyprland.conf" ]; then
+    echo "${HOME}/.config/hypr/hyprland.conf does not exist."
     exit 1
 fi
-if [ ! -d "~/.local/share/omarchy/default/hypr/apps/" ]; then
-    echo "~/.local/share/omarchy/default/hypr/apps/ does not exist."
+if [ ! -d "${HOME}/.local/share/omarchy/default/hypr/apps/" ]; then
+    echo "${HOME}/.local/share/omarchy/default/hypr/apps/ does not exist."
     exit 1
 fi
 
@@ -26,18 +26,18 @@ fi
 
 # back up files before overwriting
 TS=$(date +%Y%m%d-%H%M%S)
-cp ~/.bashrc ~/.bashrc.bak-$TS
-cp ~/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.bak-$TS
+cp "${HOME}/.bashrc" "${HOME}/.bashrc.bak-$TS"
+cp "${HOME}/.config/hypr/hyprland.conf" "${HOME}/.config/hypr/hyprland.conf.bak-$TS"
 
 # .bashrc
-echo "" >> ~/.bashrc
-echo "# from https://github.com/m5lk3n/dotfiles:" >> ~/.bashrc
-echo "source ~/.spf" >> ~/.bashrc # superfile, see below
-echo "source ~/.misc" >> ~/.bashrc
+echo "" >> "${HOME}/.bashrc"
+echo "# from https://github.com/m5lk3n/dotfiles:" >> "${HOME}/.bashrc"
+echo "source ~/.spf" >> "${HOME}/.bashrc" # superfile, see below
+echo "source ~/.misc" >> "${HOME}/.bashrc"
 
 ## dotfiles .bashrc additions
-cp .spf ~/
-cp .misc ~/
+cp .spf "${HOME}"
+cp .misc "${HOME}"
 
 # install additional packages
 ## required for flutter: cmake, ninja, mesa-utils, android-studio
@@ -59,9 +59,9 @@ sudo pacman -Syu --noconfirm --needed \
 ## https://superfile.netlify.app/configure/superfile-config/
 SPF_CONFIG_DIR=.config/superfile
 SPF_THEME_DIR=$SPF_CONFIG_DIR/theme
-mkdir -p ~/$SPF_THEME_DIR
-cp $SPF_CONFIG_DIR/config.toml ~/$SPF_CONFIG_DIR
-cp $SPF_THEME_DIR/tokyonight.toml ~/$SPF_THEME_DIR
+mkdir -p "${HOME}/$SPF_THEME_DIR"
+cp $SPF_CONFIG_DIR/config.toml "${HOME}/$SPF_CONFIG_DIR"
+cp $SPF_THEME_DIR/tokyonight.toml "${HOME}/$SPF_THEME_DIR"
 
 # dev setup
 sudo usermod -a -G flutter $USER
@@ -70,14 +70,14 @@ flutter --disable-analytics
 go install heckel.io/pcopy@latest # "build at" info is missing
 go install github.com/cheat/cheat/cmd/cheat@latest
 CHEAT_CONFIG_DIR=.config/cheat/cheatsheets/personal
-mkdir -p ~/$CHEAT_CONFIG_DIR
-cp -r $CHEAT_CONFIG_DIR/* ~/$CHEAT_CONFIG_DIR
+mkdir -p "${HOME}/$CHEAT_CONFIG_DIR"
+cp -r $CHEAT_CONFIG_DIR/* "${HOME}/$CHEAT_CONFIG_DIR"
 
 # Omarchy-specific overrides and additions
-cp .config/alacritty/alacritty.toml ~/.config/alacritty
-cp .local/share/omarchy/default/hypr/apps/jetbrains.conf ~/.local/share/omarchy/default/hypr/apps/
+cp .config/alacritty/alacritty.toml "${HOME}/.config/alacritty"
+cp .local/share/omarchy/default/hypr/apps/jetbrains.conf "${HOME}/.local/share/omarchy/default/hypr/apps/"
 ## desktop wallpaper
-curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o ~/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg
+curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o "${HOME}/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg"
 ## no gaps
-cp .config/hypr/*.conf ~/.config/hypr/
-echo "source = ~/.config/hypr/looknfeel.conf" >> ~/.config/hypr/hyprland.conf
+cp .config/hypr/*.conf "${HOME}/.config/hypr/"
+echo "source = ~/.config/hypr/looknfeel.conf" >> "${HOME}/.config/hypr/hyprland.conf"
