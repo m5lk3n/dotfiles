@@ -13,7 +13,7 @@ My opinionated setup on top of the opinionated [Omarchy 2.0](https://omarchy.org
   - disables the default screen saver, however not the lock screen
   - default key bindings
   - increases default terminal font size
-  - changes Jetbrains app window behavior to be floating (required to work around[#1300](https://github.com/basecamp/omarchy/issues/1300))
+  - changes Jetbrains app window behavior to be floating (required to work around [#1300](https://github.com/basecamp/omarchy/issues/1300))
 
 <sup>0</sup>: Assumes "Tokyo Night" as the underlying theme.
 
