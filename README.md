@@ -1,22 +1,35 @@
 # dotfiles
 
-My opinionated [Omarchy 2.0](https://omarchy.org/) setup.
+My opinionated setup on top of the opinionated [Omarchy 2.0](https://omarchy.org/).
 
-**THIS IS WORK IN PROGRESS!** 
+## Changes
 
-**The Flutter/Android Studio setup is currently broken due to [this issue](https://github.com/basecamp/omarchy/issues/1300)!**
+- Removes the following packages/web apps along with its default config (where applicable) as per [this script](uninstall-defaults.sh).
+
+- Installs additional packages and config as per [this setup](./setup.sh). Mainly, Superfile<sup>0</sup>, Flutter, Golang, Librewolf, Android Studio, VS Code.
+
+- Changes the following in Omarchy:
+  - to have no window gaps
+  - disables the default screen saver, however not the lock screen
+  - default key bindings
+  - increases default terminal font size
+  - changes Jetbrains app window behavior to be floating (required to work around[#1300](https://github.com/basecamp/omarchy/issues/1300))
+
+<sup>0</sup>: Assumes "Tokyo Night" as the underlying theme.
 
 ## Disclaimer
 
-**This setup:**
+**Warning!**
 
-**- Modifies configuration files!** (only `~/.bashrc` and `hyprland.conf` are backed up)
+This setup:
 
-**- Installs and uninstalls packages!**
+- Modifies configuration files! (only `~/.bashrc` and `hyprland.conf` are backed up.)
 
-**- Has no uninstall!**
+- Installs and uninstalls packages!
 
-**- Comes as-is, without support/warranty/guarantee/whatsoever!**
+- Has no uninstall!
+
+- Comes as-is, without support/warranty/guarantee/whatsoever!
 
 **Use at your own risk!**
 
@@ -27,8 +40,3 @@ My opinionated [Omarchy 2.0](https://omarchy.org/) setup.
 ```bash
 make setup
 ```
-
-## To do
-
-- Finish Flutter/Android Studio/Android SDK setup.
-- Add a screenshot here.
