@@ -43,12 +43,9 @@ cp .misc "${HOME}"
 ## required for flutter: cmake, ninja, mesa-utils, android-studio
 ## required for superfile: exiftool
 sudo pacman -Syu --noconfirm --needed \
-    android-studio \
     cmake \
     exiftool \
-    flutter \
     go \
-    librewolf \
     mesa-utils \
     ncdu \
     ninja \
@@ -63,10 +60,7 @@ mkdir -p "${HOME}/$SPF_THEME_DIR"
 cp $SPF_CONFIG_DIR/config.toml "${HOME}/$SPF_CONFIG_DIR"
 cp $SPF_THEME_DIR/tokyonight.toml "${HOME}/$SPF_THEME_DIR"
 
-# dev setup
-sudo usermod -a -G flutter $USER
-flutter --disable-analytics
-## tools requiring Go
+# tools requiring Go
 go install heckel.io/pcopy@latest # "build at" info is missing
 go install github.com/cheat/cheat/cmd/cheat@latest
 CHEAT_CONFIG_DIR=.config/cheat/cheatsheets/personal

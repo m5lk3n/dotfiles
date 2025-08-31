@@ -8,7 +8,7 @@ My opinionated setup on top of the opinionated [Omarchy 2.0](https://omarchy.org
 
 - Removes the following packages/web apps along with its default config (where applicable) as per [this script](uninstall-defaults.sh).
 
-- Installs additional packages and config as per [this setup](./setup.sh). Mainly, Superfile<sup>0</sup>, Flutter, Golang, Librewolf, Android Studio, VS Code.
+- Installs additional packages and config as per [this setup](./setup.sh).
 
 - Changes the following in Omarchy:
   - to have no window gaps
