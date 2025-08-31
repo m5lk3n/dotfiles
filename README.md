@@ -6,9 +6,9 @@ My opinionated setup on top of the opinionated [Omarchy 2.0](https://omarchy.org
 
 ## Changes
 
-- Removes the following packages/web apps along with its default config (where applicable) as per [this script](uninstall-defaults.sh).
+- Removes the packages/web apps along with its default config (where applicable) as per [this script](uninstall-defaults.sh).
 
-- Installs additional packages and config as per [this setup](./setup.sh).
+- Installs additional packages and config as per [this script](./setup.sh).
 
 - Changes the following in Omarchy:
   - to have no window gaps
@@ -16,8 +16,6 @@ My opinionated setup on top of the opinionated [Omarchy 2.0](https://omarchy.org
   - default key bindings
   - increases default terminal font size
   - changes Jetbrains app window behavior to be floating (required to work around [#1300](https://github.com/basecamp/omarchy/issues/1300))
-
-<sup>0</sup>: Assumes "Tokyo Night" as the underlying theme.
 
 ## Disclaimer
 
@@ -29,13 +27,13 @@ This setup:
 
 - Installs and uninstalls packages!
 
-- Has no uninstall!
+- Changes could only be reverted manually!
 
 - Comes as-is, without support/warranty/guarantee/whatsoever!
 
 **Use at your own risk!**
 
-**I'm not responsible for anything!**
+**I take no responsibility!**
 
 ## Usage
 

@@ -14,7 +14,11 @@ Last, perform the following steps manually:
 
 # Flutter
 - Install Android Studio (https://developer.android.com/studio)
+  - Install Android SDK via Android Studio
 - Install Flutter (https://docs.flutter.dev/get-started/install/linux)
-- Run 'flutter doctor' and complete the Android setup
-- Run 'sudo usermod -a -G flutter $USER'
 - Run 'flutter --disable-analytics'
+- Run 'flutter doctor'
+- You may need to run
+  - 'flutter config --android-sdk "${HOME}/Android/Sdk"'
+  - 'flutter doctor --android-licenses'
+  - 'sudo usermod -a -G flutter $USER'
