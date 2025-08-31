@@ -2,6 +2,8 @@
 
 My opinionated setup on top of the opinionated [Omarchy 2.0](https://omarchy.org/).
 
+![My Omarchy](./myomarchy.png)
+
 ## Changes
 
 - Removes the following packages/web apps along with its default config (where applicable) as per [this script](uninstall-defaults.sh).
