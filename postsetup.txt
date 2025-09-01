@@ -1,24 +1,30 @@
 Last, perform the following steps manually:
 
+# LibreWolf
+- Run once: 'librewolf --setDefaultBrowser'
+- In LibreWolf
+  - browse to 'about:config', set 'privacy.resistFingerprinting' to 'false'
+  - go to 'Settings' and select dark mode
+
 # Omarchy
-- Cycle through the wallpapers with SUPER CTRL + SPACE until the custom one appears
 - Change the Omarchy theme forth and back to "Tokyo Night" for window decorations to re-apply!
+- Cycle through the wallpapers with SUPER CTRL + SPACE until the custom one appears
 - Relaunch Omarchy for some changes to take effect
 - Set up Fido (for sudo)
 - Set up Web Apps
 
-# LibreWolf
-- Install LibreWolf (via Omarchy menu)
-- Run once: 'librewolf --setDefaultBrowser'
-- In LibreWolf, browse to 'about:config', set 'privacy.resistFingerprinting' to 'true', and select dark mode
-
 # Flutter
-- Install Android Studio (https://developer.android.com/studio)
-  - Install Android SDK via Android Studio
+- Install Android Studio
+  - In Omarchy: Install -> AUR -> android-studio (https://developer.android.com/studio/install#linux)
+  - Install Android SDK via Android Studio -> SDK Manager -> SDK Tools -> select Android SDK Command-line Tools
 - Install Flutter (https://docs.flutter.dev/get-started/install/linux)
 - Run 'flutter --disable-analytics'
 - Run 'flutter doctor'
-- You may need to run
-  - 'flutter config --android-sdk "${HOME}/Android/Sdk"'
-  - 'flutter doctor --android-licenses'
+- You may (!) need to run
+  - 'flutter config --android-sdk "${HOME}/Android/Sdk"' (depending on installation path)
+  - 'flutter config --android-studio-dir "${HOME}/Android/Studio"' (depending on installation path)
   - 'sudo usermod -a -G flutter $USER'
+- Run 'flutter doctor --android-licenses'  
+
+# Tailscale
+- In Omarchy: Install -> Service -> Tailscale 

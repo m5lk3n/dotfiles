@@ -15,7 +15,7 @@ My opinionated setup on top of the opinionated [Omarchy 2.0](https://omarchy.org
   - disables the default screen saver, however not the lock screen
   - default key bindings
   - increases default terminal font size
-  - changes Jetbrains app window behavior to be floating (required to work around [#1300](https://github.com/basecamp/omarchy/issues/1300))
+  - changes Jetbrains app window behavior to be floating (required to work around [#1300](https://github.com/basecamp/omarchy/issues/1300) related to Android Studio)
 
 ## Disclaimer
 
@@ -40,3 +40,8 @@ This setup:
 ```bash
 make setup
 ```
+
+## To do
+
+- Automate Android Studio and Android SDK installation
+- Automate Flutter installation

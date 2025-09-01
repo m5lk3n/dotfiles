@@ -52,6 +52,8 @@ sudo pacman -Syu --noconfirm --needed \
     superfile \
     visual-studio-code-bin
 
+yay --noconfirm --answerclean All --answerdiff None -S librewolf-bin
+
 # superfile config
 ## https://superfile.netlify.app/configure/superfile-config/
 SPF_CONFIG_DIR=.config/superfile
