@@ -1,0 +1,9 @@
+{
+    "chat.editor.fontSize": 16,
+    "editor.fontSize": 16,
+    "editor.mouseWheelZoom": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.fontSize": 14,
+    "window.zoomLevel": 1
+}
