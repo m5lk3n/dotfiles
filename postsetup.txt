@@ -4,7 +4,10 @@ Last, perform the following steps manually:
 - Run once: 'librewolf --setDefaultBrowser'
 - In LibreWolf
   - browse to 'about:config', set 'privacy.resistFingerprinting' to 'false'
-  - go to 'Settings' and select dark mode
+  - go to 'Settings'
+    - select dark mode
+    - under "Filter lists" tab, select the two entries under "Cookie notices"
+  - install extension "SponsorBlock"
 
 # Omarchy
 - Change the Omarchy theme forth and back to "Tokyo Night" for window decorations to re-apply!
