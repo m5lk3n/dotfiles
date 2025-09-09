@@ -3,6 +3,7 @@ alias ls='eza -lhg --group-directories-first --icons=auto'
 alias ll='spf --fh --fch "$PWD"'
 alias pcp='pcopy copy'
 alias ppaste='pcopy paste'
+alias cheat='cheat -a'
 
 export PATH=$PATH:$HOME/go/bin:$HOME/flutter/bin
 export CHROME_EXECUTABLE=/usr/bin/chromium # for Flutter web

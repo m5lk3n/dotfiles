@@ -1,0 +1,2 @@
+# To delete the last line from the file
+sed '$d' <file>
