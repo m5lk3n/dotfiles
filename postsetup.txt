@@ -21,8 +21,10 @@ Last, perform the following steps manually:
   - In Omarchy: Install -> AUR -> android-studio (https://developer.android.com/studio/install#linux)
   - Install Android SDK via Android Studio -> SDK Manager -> SDK Tools -> select Android SDK Command-line Tools
 - Install Flutter (https://docs.flutter.dev/get-started/install/linux)
-- Run 'flutter --disable-analytics'
-- Run 'flutter doctor'
+- Run 
+  - 'flutter --disable-analytics'
+  - 'dart --disable-analytics'
+  - 'flutter doctor'
 - You may (!) need to run
   - 'flutter config --android-sdk "${HOME}/Android/Sdk"' (depending on installation path)
   - 'flutter config --android-studio-dir "${HOME}/Android/Studio"' (depending on installation path)
