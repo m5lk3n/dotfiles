@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# see omarchy/install/packages.sh
+# see https://github.com/basecamp/omarchy/blob/master/install/omarchy-base.packages
 sudo pacman -Rns --noconfirm 1password-beta
 sudo pacman -Rns --noconfirm 1password-cli
 sudo pacman -Rns --noconfirm kdenlive
@@ -13,7 +13,7 @@ sudo pacman -Rns --noconfirm spotify
 sudo pacman -Rns --noconfirm typora
 sudo pacman -Rns --noconfirm xournalpp
 
-# see omarchy/install/packaging/webapps.sh
+# see https://github.com/basecamp/omarchy/blob/master/install/packaging/webapps.sh
 omarchy-webapp-remove \
     "Basecamp" \
     "Figma" \

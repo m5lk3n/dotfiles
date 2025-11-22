@@ -1,6 +1,6 @@
 # dotfiles
 
-My opinionated setup on top of the opinionated [Omarchy 2.0](https://omarchy.org/) (v2.1.0 at the time of writing (2025-09-05)).
+My opinionated setup on top of the opinionated [Omarchy](https://omarchy.org/) (v3.2 at the time of writing (2025-11-22)).
 
 ![My Omarchy](./myomarchy.png)
 
