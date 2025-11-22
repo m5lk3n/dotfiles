@@ -22,7 +22,7 @@ My opinionated setup on top of the opinionated [Omarchy](https://omarchy.org/) (
 
 This setup:
 
-- Modifies configuration files! (only `~/.bashrc` and `hyprland.conf` are backed up.)
+- Modifies configuration files! (only `~/.bashrc` is backed up.)
 
 - Installs and uninstalls packages!
 

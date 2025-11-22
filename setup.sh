@@ -9,25 +9,20 @@ if [ ! -f "${HOME}/.bashrc" ]; then
     echo "${HOME}/.bashrc does not exist."
     exit 1
 fi
-if [ ! -f "${HOME}/.config/hypr/hyprland.conf" ]; then
-    echo "${HOME}/.config/hypr/hyprland.conf does not exist."
-    exit 1
-fi
 if [ ! -d "${HOME}/.local/share/omarchy/default/hypr/apps/" ]; then
     echo "${HOME}/.local/share/omarchy/default/hypr/apps/ does not exist."
     exit 1
 fi
 
-read -p "This will overwrite configuration files! Only ~/.bashrc and ~/.config/hypr/hyprland.conf will be backed up. For more details, see https://github.com/m5lk3n/dotfiles/?tab=readme-ov-file#dotfiles. Continue? [y/N]: " confirm
+read -p "This will overwrite configuration files! Only ~/.bashrc will be backed up. For more details, see https://github.com/m5lk3n/dotfiles/?tab=readme-ov-file#dotfiles. Continue? [y/N]: " confirm
 if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
     echo "Aborted."
     exit 1
 fi
 
-# back up files before overwriting
+# back up before overwriting
 TS=$(date +%Y%m%d-%H%M%S)
 cp "${HOME}/.bashrc" "${HOME}/.bashrc.bak-$TS"
-cp "${HOME}/.config/hypr/hyprland.conf" "${HOME}/.config/hypr/hyprland.conf.bak-$TS"
 
 # .bashrc
 echo "" >> "${HOME}/.bashrc"
@@ -79,4 +74,3 @@ cp .config/alacritty/alacritty.toml "${HOME}/.config/alacritty"
 curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o "${HOME}/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg"
 ## no gaps
 cp .config/hypr/*.conf "${HOME}/.config/hypr/"
-echo "source = ~/.config/hypr/looknfeel.conf" >> "${HOME}/.config/hypr/hyprland.conf"
