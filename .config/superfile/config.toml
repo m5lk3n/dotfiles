@@ -51,8 +51,8 @@ ignore_missing_fields = false
 # 
 #  If you don't have or don't want Nerdfont installed you can turn this off
 nerdfont = true
-#
-# Show checkbox icons in select mode (requires nerdfont = true)
+# 
+# Show checkbox icons in select mode (requires nerdfont)
 show_select_icons = true
 # 
 # Set transparent background or not (this only work when your terminal background is transparent)

@@ -75,7 +75,6 @@ cp -r $CHEAT_CONFIG_DIR/* "${HOME}/$CHEAT_CONFIG_DIR"
 
 # Omarchy-specific overrides and additions
 cp .config/alacritty/alacritty.toml "${HOME}/.config/alacritty"
-cp .local/share/omarchy/default/hypr/apps/jetbrains.conf "${HOME}/.local/share/omarchy/default/hypr/apps/"
 ## desktop wallpaper
 curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o "${HOME}/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg"
 ## no gaps
