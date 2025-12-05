@@ -11,7 +11,8 @@ Last, perform the following steps manually:
 
 # Omarchy
 - Change the Omarchy theme forth and back to "Tokyo Night" for window decorations to re-apply!
-- Cycle through the wallpapers with SUPER CTRL + SPACE until the custom one appears
+- Download https://wallpapercave.com/wp/nqjnrKZ.png (Cloudflare-protected) as ~/.config/omarchy/themes/tokyo-night/backgrounds/6-archlinux-retro.png
+- Cycle through the wallpapers with SUPER CTRL + SPACE until the custom ones appear
 - Relaunch Omarchy for some changes to take effect
 - Set up Fido (for sudo)
 - Set up Web Apps
@@ -29,7 +30,7 @@ Last, perform the following steps manually:
   - 'flutter config --android-sdk "${HOME}/Android/Sdk"' (depending on installation path)
   - 'flutter config --android-studio-dir "${HOME}/Android/Studio"' (depending on installation path)
   - 'sudo usermod -a -G flutter $USER'
-- Run 'flutter doctor --android-licenses'  
+- Run 'flutter doctor --android-licenses'
 
 # Tailscale
-- In Omarchy: Install -> Service -> Tailscale 
+- In Omarchy: Install -> Service -> Tailscale

@@ -40,6 +40,7 @@ cp .misc "${HOME}"
 sudo pacman -Syu --noconfirm --needed \
     cmake \
     exiftool \
+    gimp \
     go \
     mesa-utils \
     ncdu \
@@ -72,5 +73,7 @@ cp -r $CHEAT_CONFIG_DIR/* "${HOME}/$CHEAT_CONFIG_DIR"
 cp .config/alacritty/alacritty.toml "${HOME}/.config/alacritty"
 ## desktop wallpaper
 curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o "${HOME}/.config/omarchy/themes/tokyo-night/backgrounds/4-archlinux.jpg"
-## no gaps
+## no gaps, but a bit of rounding
 cp .config/hypr/*.conf "${HOME}/.config/hypr/"
+## prompt
+starship preset gruvbox-rainbow > ~/.config/starship.toml
