@@ -1,2 +1,5 @@
 # To view a repo's remote URL
 git remote get-url --all origin
+
+# To set a repo's remote URL
+git remote set-url origin <url>
