@@ -1,0 +1,197 @@
+# gcloud CLI – Personal Cheat Sheet
+# Source: Google Cloud SDK cheat sheet (https://docs.cloud.google.com/sdk/docs/cheatsheet#cheat_sheet)  
+# Updated: 2026-01 (official page)
+
+
+# Getting started
+
+# To initialize, authorize & configure
+gcloud init
+
+# To show version and installed components
+gcloud version
+
+# To install specific components
+gcloud components install <name>
+
+# To update CLI to latest version
+gcloud components update
+
+# To set default project
+gcloud config set project <ID>
+
+# To show current gcloud environment
+gcloud info
+
+
+# Help
+
+# To show help or search docs
+gcloud help
+
+# To send feedback to gcloud team
+gcloud feedback
+
+# To show topic help (e.g., filtering/formatting)
+gcloud topic <topic>
+
+
+# Personalization (configurations)
+
+# To set a property (e.g., compute/zone)
+gcloud config set <PROPERTY> <VALUE>
+
+# To get a property value
+gcloud config get <PROPERTY>
+
+# To list config properties
+gcloud config list
+
+# To create named configuration
+gcloud config configurations create <NAME>
+
+# To list available configurations
+gcloud config configurations list
+
+# To switch active configuration
+gcloud config configurations activate <NAME>
+
+
+# Authorization & Credentials
+
+# To log in with user credentials
+gcloud auth login
+
+# To authenticate with a service account
+gcloud auth activate-service-account --key-file <FILE>
+
+# To manage Application Default Credentials
+gcloud auth application-default login
+
+# To list authenticated accounts
+gcloud auth list
+
+# To print current access token
+gcloud auth print-access-token
+
+# To revoke credentials
+gcloud auth revoke <ACCOUNT>
+
+
+# Projects
+
+# To show project metadata
+gcloud projects describe <PROJECT_ID>
+
+# To add IAM policy binding to project
+gcloud projects add-iam-policy-binding <ID> \
+  --member=<MEMBER> \
+  --role=<ROLE>
+
+
+# IAM
+
+# To list grantable roles
+gcloud iam list-grantable-roles <RESOURCE>
+
+# To create custom IAM role
+gcloud iam roles create <ROLE_ID> --project=<ID>
+
+# To create service account
+gcloud iam service-accounts create <NAME> --project=<ID>
+
+# To add IAM binding to service account
+gcloud iam service-accounts add-iam-policy-binding <SA> \
+  --member=<MEMBER> \
+  --role=<ROLE>
+
+# To replace service account IAM policy
+gcloud iam service-accounts set-iam-policy <SA> <POLICY_FILE>
+
+# To list service account keys
+gcloud iam service-accounts keys list <SA>
+
+
+# Docker & GKE
+
+# To configure Docker authentication
+gcloud auth configure-docker
+
+# To create GKE cluster
+gcloud container clusters create <CLUSTER> --zone=<ZONE>
+
+# To list GKE clusters
+gcloud container clusters list
+
+# To update kubeconfig credentials
+gcloud container clusters get-credentials <CLUSTER> --zone=<ZONE>
+
+# To list container image tags
+gcloud container images list-tags <IMAGE>
+
+
+# Virtual Machines & Compute Engine
+
+# To list compute zones
+gcloud compute zones list
+
+# To create VM instance
+gcloud compute instances create <NAME> --zone=<ZONE>
+
+# To describe VM instance
+gcloud compute instances describe <NAME> --zone=<ZONE>
+
+# To list VM instances
+gcloud compute instances list
+
+# To snapshot a disk
+gcloud compute disks snapshot <DISK> --zone=<ZONE>
+
+# To describe snapshot
+gcloud compute snapshots describe <SNAPSHOT>
+
+# To delete snapshot
+gcloud compute snapshots delete <SNAPSHOT>
+
+# To SSH into VM
+gcloud compute ssh <INSTANCE> --zone=<ZONE>
+
+
+# Serverless & App Engine
+
+# To deploy App Engine app
+gcloud app deploy
+
+# To list App Engine versions
+gcloud app versions list
+
+# To open app in browser
+gcloud app browse
+
+# To create App Engine app
+gcloud app create
+
+# To read App Engine logs
+gcloud app logs read
+
+
+# Miscellaneous
+
+# To decrypt data using Cloud KMS
+gcloud kms decrypt \
+  --ciphertext-file=<FILE> \
+  --plaintext-file=<OUT> \
+  --location=<LOC> \
+  --keyring=<RING> \
+  --key=<KEY>
+
+# To list logging logs
+gcloud logging logs list
+
+# To describe Cloud SQL backup
+gcloud sql backups describe --instance=<INSTANCE>
+
+# To export Cloud SQL database
+gcloud sql export sql <BUCKET_URI> \
+  --instance=<INSTANCE> \
+  --database=<DB>

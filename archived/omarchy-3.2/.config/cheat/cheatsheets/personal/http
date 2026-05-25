@@ -1,0 +1,35 @@
+# HTTP Status Codes
+
+# 1xx – Informational
+# 100 Continue – Request received, continue process
+# 101 Switching Protocols – Server is switching protocols
+
+# 2xx – Success
+# 200 OK – Request succeeded
+# 201 Created – Resource successfully created
+# 202 Accepted – Request accepted for processing
+# 204 No Content – Request succeeded, no content returned
+
+# 3xx – Redirection
+# 300 Multiple Choices – Multiple options available
+# 301 Moved Permanently – Resource permanently moved
+# 302 Found – Resource temporarily moved
+# 304 Not Modified – Cached version is still valid
+
+# 4xx – Client Errors
+# 400 Bad Request – Invalid request syntax
+# 401 Unauthorized – Authentication required
+# 403 Forbidden – Access denied
+# 404 Not Found – Resource not found
+# 405 Method Not Allowed – HTTP method not supported
+# 408 Request Timeout – Client took too long
+# 409 Conflict – Request conflicts with current state
+# 410 Gone – Resource permanently removed
+# 429 Too Many Requests – Rate limit exceeded
+
+# 5xx – Server Errors
+# 500 Internal Server Error – Generic server error
+# 501 Not Implemented – Feature not supported
+# 502 Bad Gateway – Invalid response from upstream server
+# 503 Service Unavailable – Server temporarily unavailable
+# 504 Gateway Timeout – Upstream server timed out
