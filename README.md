@@ -1,20 +1,36 @@
 # dotfiles
 
-My opinionated setup on top of the opinionated [Omarchy](https://omarchy.org/) (v3.2 at the time of writing (2025-11-22)).
+:construction: **WORK IN PROGRESS, NOT VERIFIED YET!**
 
-![My Omarchy](./myomarchy.png)
+[My](https://michael-klein.info) opinionated setup on top of Arch Linux and Dank Linux with [niri](https://github.com/niri-wm/niri) as "*scrollable-tiling* Wayland compositor".
 
-## Changes
+## What this repo provides
 
-- Removes the packages/web apps along with its default config (where applicable) as per [this script](uninstall-defaults.sh).
+- Installs additional packages and config as per [setup script](./setup.sh)
+- Provides some post-setup recommendations as per [this documentation](./postsetup.md)
 
-- Installs additional packages and config as per [this script](./setup.sh).
+## Prerequisites
 
-- Changes the following in Omarchy:
-  - to have no window gaps
-  - disables the default screen saver, however not the lock screen
-  - default key bindings
-  - increases default terminal font size
+**1. Install [Arch Linux](https://wiki.archlinux.org/title/Installation_guide) (I used `archinstall`)!** 
+
+**2. Install [Dank Linux](https://danklinux.com):**
+
+  ```bash
+  curl -fsSL https://install.danklinux.com/ | sh
+  sudo shutdown -r now
+  ```
+
+**3. Reboot**
+
+## Setup
+
+Once, Dank Linux is installed and the machine is rebooted:
+
+```bash
+make setup
+```
+
+---
 
 ## Disclaimer
 
@@ -24,7 +40,7 @@ This setup:
 
 - Modifies configuration files! (only `~/.bashrc` is backed up.)
 
-- Installs and uninstalls packages!
+- Installs packages!
 
 - Changes could only be reverted manually!
 
@@ -34,13 +50,12 @@ This setup:
 
 **I take no responsibility!**
 
-## Usage
-
-```bash
-make setup
-```
+---
 
 ## To do
 
-- Automate Android Studio and Android SDK installation
-- Automate Flutter installation
+- Set up Fido (for sudo)
+- Set up lock screen
+- Install Claude CLI
+- Install Copilot CLI
+- Automate VS Code extension installation

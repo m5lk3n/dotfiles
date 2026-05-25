@@ -1,0 +1,28 @@
+# postsetup
+
+Last, perform the following steps manually:
+
+## skip if you're not [me](https://michael-klein.info)
+
+```bash
+curl https://michael-klein.info/images/mk.png -o "${HOME}/.face"
+```
+
+## tailscale
+
+```bash
+tailscale login
+```
+
+## configure Dank Linux
+
+- Under Settings -> Theme & Colors -> Browse Themes: Install retrobox
+
+## configure LibreWolf
+
+- In LibreWolf
+  - browse to 'about:config', set 'privacy.resistFingerprinting' to 'false'
+  - browse to 'about:preferences', select dark mode
+  - browse to 'about:addons' 
+    - "uBlock Origin" -> `...` -> `Preferences` -> under "Filter lists" tab, select the two entries under "Cookie notices"
+    - install extension "SponsorBlock"
