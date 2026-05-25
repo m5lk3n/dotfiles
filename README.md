@@ -1,7 +1,7 @@
 <h1 align="center">dotfiles</h1>
 
 <p align="center">
-:construction: **WORK IN PROGRESS, NOT VERIFIED YET!**
+:construction: <b>WORK IN PROGRESS, NOT VERIFIED YET!</b>
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-<a href="https://youtu.be/uiXiD5foFCI">A Quick First Look At The Niri Window Manager</a>
+(Background: <a href="https://youtu.be/uiXiD5foFCI">A Quick First Look At The Niri Window Manager</a>)
 </p>
 
 ## What this repo provides

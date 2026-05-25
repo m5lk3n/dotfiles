@@ -2,12 +2,6 @@
 
 Last, perform the following steps manually:
 
-## skip if you're not [me](https://michael-klein.info)
-
-```bash
-curl https://michael-klein.info/images/mk.png -o "${HOME}/.face"
-```
-
 ## tailscale
 
 ```bash
@@ -26,3 +20,9 @@ tailscale login
   - browse to 'about:addons' 
     - "uBlock Origin" -> `...` -> `Preferences` -> under "Filter lists" tab, select the two entries under "Cookie notices"
     - install extension "SponsorBlock"
+
+## skip if you're not [me](https://michael-klein.info)
+
+```bash
+curl https://michael-klein.info/images/mk.png -o "${HOME}/.face"
+```
