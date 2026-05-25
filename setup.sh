@@ -43,7 +43,6 @@ sudo pacman -Syu --noconfirm --needed \
     exiftool \
     eza \
     gimp \
-    git \
     glow \
     go \
     ncdu \

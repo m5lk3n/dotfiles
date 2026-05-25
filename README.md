@@ -11,20 +11,27 @@
 
 ## Prerequisites
 
-**1. Install [Arch Linux](https://wiki.archlinux.org/title/Installation_guide) (I used `archinstall`)!** 
+- Install Arch Linux:
 
-**2. Install [Dank Linux](https://danklinux.com):**
+  - [Download the latest ISO](https://archlinux.org/download/) and copy it on a USB flash drive
+  - Boot from USB stick
+  - Run `archinstall` (or [follow the installation guide](https://wiki.archlinux.org/title/Installation_guide))
+
+- On Arch, install [Dank Linux](https://danklinux.com) and **reboot**:
 
   ```bash
   curl -fsSL https://install.danklinux.com/ | sh
   sudo shutdown -r now
   ```
 
-**3. Reboot**
+- Install `git` and clone this repo:
+
+  ```bash
+  sudo pacman -Syu git
+  git clone https://github.com/m5lk3n/dotfiles.git
+  ```
 
 ## Setup
-
-Once, Dank Linux is installed and the machine is rebooted:
 
 ```bash
 make setup
@@ -59,3 +66,7 @@ This setup:
 - Install Claude CLI
 - Install Copilot CLI
 - Automate VS Code extension installation
+
+## Open
+
+- `sgpt`?
