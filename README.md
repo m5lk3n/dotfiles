@@ -9,13 +9,8 @@
 </p>
 
 <p align="center">
-(Background: <a href="https://youtu.be/uiXiD5foFCI">A Quick First Look At The Niri Window Manager</a>)
+Installs additional packages and config as per <a href="./setup.sh">setup script</a>. Provides some post-setup recommendations as per <a href="./postsetup.md">this documentation</a>.
 </p>
-
-## What this repo provides
-
-- Installs additional packages and config as per [setup script](./setup.sh)
-- Provides some post-setup recommendations as per [this documentation](./postsetup.md)
 
 ## Prerequisites
 
@@ -25,10 +20,15 @@
   - Boot from USB stick
   - Run `archinstall` (or [follow the installation guide](https://wiki.archlinux.org/title/Installation_guide))
 
-- On Arch, install [Dank Linux](https://danklinux.com) and **reboot**:
+- On Arch, install [Dank Linux](https://danklinux.com):
 
   ```bash
   curl -fsSL https://install.danklinux.com/ | sh
+  ```
+
+- **Reboot**:
+
+  ```bash
   sudo shutdown -r now
   ```
 
@@ -44,6 +44,14 @@
 ```bash
 make setup
 ```
+
+---
+
+## Bookmarks
+
+- [A Quick First Look At The Niri Window Manager](https://youtu.be/uiXiD5foFCI)
+
+- [Archive](https://github.com/m5lk3n/dotfiles/tree/archive)
 
 ---
 
@@ -65,7 +73,7 @@ This setup:
 
 **I take no responsibility!**
 
-**I'm not responsible for external links!**
+**Also, I'm not responsible for external links!**
 
 ---
 
