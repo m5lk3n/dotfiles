@@ -1,8 +1,16 @@
-# dotfiles
+<h1 align="center">dotfiles</h1>
 
+<p align="center">
 :construction: **WORK IN PROGRESS, NOT VERIFIED YET!**
+</p>
 
-[My](https://michael-klein.info) opinionated setup on top of Arch Linux and Dank Linux with [niri](https://github.com/niri-wm/niri) as "*scrollable-tiling* Wayland compositor".
+<p align="center">
+<a href="https://michael-klein.info">My</a> opinionated setup on top of Arch Linux and Dank Linux with <a href="https://github.com/niri-wm/niri">niri</a> as "<em>scrollable-tiling</em> Wayland compositor".
+</p>
+
+<p align="center">
+<a href="https://youtu.be/uiXiD5foFCI">A Quick First Look At The Niri Window Manager</a>
+</p>
 
 ## What this repo provides
 
@@ -56,6 +64,8 @@ This setup:
 **Use at your own risk!**
 
 **I take no responsibility!**
+
+**I'm not responsible for external links!**
 
 ---
 
