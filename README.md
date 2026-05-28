@@ -80,7 +80,6 @@ This setup:
 ## To do
 
 - Set up Fido (for sudo)
-- Set up lock screen
 - Install Claude CLI
 - Install Copilot CLI
 - Automate VS Code extension installation

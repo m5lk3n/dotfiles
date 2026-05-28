@@ -11,6 +11,7 @@ tailscale login
 ## configure Dank Linux
 
 - Under Settings -> Theme & Colors -> Browse Themes: Install retrobox
+- Under Power & Sleep -> Idle Settings -> Configure "Automatically lock after", "Turn off monitors after", "Suspend system after"
 
 ## configure LibreWolf
 
