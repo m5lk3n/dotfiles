@@ -15,6 +15,7 @@ tailscale login
 ## configure LibreWolf
 
 - In LibreWolf
+  - browse to https://addons.mozilla.org/en-US/firefox/addon/gruvbox-dark-theme/ and install theme
   - browse to 'about:config', set 'privacy.resistFingerprinting' to 'false'
   - browse to 'about:preferences', select dark mode
   - browse to 'about:addons' 

@@ -42,9 +42,11 @@ sudo pacman -Syu --noconfirm --needed \
     evince \
     exiftool \
     eza \
+    gvfs-smb \
     gimp \
     glow \
     go \
+    jq \
     ncdu \
     superfile \
     tailscale \
@@ -69,12 +71,12 @@ cp "${CODE_CONFIG_DIR}/settings.json" "${HOME}/${CODE_CONFIG_DIR}"
 
 # Superfile config
 ## https://superfile.netlify.app/configure/superfile-config/
-# TODO: in .config/superfile/config.toml, set 
-#   editor = "vim"
-#   dir_editor = "vim"
-#   cd_on_exit = true
-#   theme = "0x96f"
-#   metadata = false
+CFG="$HOME/.config/superfile/config.toml"
+sed -i \
+  -e 's/^cd_on_quit = .*/cd_on_quit = true/' \
+  -e 's/^theme = .*/theme = "0x96f"/' \
+  -e 's/^metadata = .*/metadata = true/' \
+  "$CFG"
 
 # tools requiring Go
 go install heckel.io/pcopy@latest # "build at" info is missing
@@ -84,8 +86,11 @@ mkdir -p "${HOME}/$CHEAT_CONFIG_DIR"
 cp -r $CHEAT_CONFIG_DIR/* "${HOME}/$CHEAT_CONFIG_DIR"
 
 ## desktop wallpaper
-curl https://wallpaperbat.com/img/662354-arch-linux-wallpaper-top-free-arch-linux-background.jpg -o "${HOME}/Pictures/archlinux.jpg"
-# TODO: in .local/state/DankMaterialShell/session.json, set "wallpaperPath" to "${HOME}/Pictures/archlinux.jpg"
+curl https://raw.githubusercontent.com/basecamp/omarchy/refs/heads/dev/themes/ristretto/backgrounds/1-color-curves.jpg -o "${HOME}/Pictures/wallpaper.jpg"
+jq '.wallpaperPath = "/home/michael/Pictures/wallpaper.jpg"' \
+  ~/.local/state/DankMaterialShell/session.json \
+  > /tmp/session.json && \
+mv /tmp/session.json ~/.local/state/DankMaterialShell/session.json
 
 ## prompt
 curl -sS https://starship.rs/install.sh | sh # -s -- --bin-dir /usr/local/bin
@@ -95,15 +100,10 @@ starship preset gruvbox-rainbow > ~/.config/starship.toml
 # TODO: curl -fsSL https://claude.ai/install.sh | bash
 
 ## niri
-# TODO:
-#  in ${HOME}/.config/niri/config.kdl,
-#   uncomment 
-#    focus-follows-mouse max-scroll-amount="0%"
-#  in ${HOME}/.config/niri/dms/binds.kdl,
-#   change
-#    Mod+L to Mod+Return
-#   add
-#    Mod+B hotkey-overlay-title="Open Browser" { spawn "librewolf"; }
+sed -i 's|^[[:space:]]*//[[:space:]]*focus-follows-mouse|    focus-follows-mouse|' $HOME/.config/niri/config.kdl
+CFG="$HOME/.config/niri/dms/binds.kdl"
+sed -i 's/"Mod+L"/"Mod+Return"/' "$CFG"
+sed -i '$i\    Mod+B hotkey-overlay-title="Open Browser" { spawn "librewolf"; }' "$CFG"
 
 ## start tailscale
 sudo systemctl start tailscaled
