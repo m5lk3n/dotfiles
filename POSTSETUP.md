@@ -1,6 +1,8 @@
-# postsetup
+# Post-Setup Steps
 
-Last, perform the following steps manually:
+Optionally, perform [these steps](OPTIONAL.md).
+
+Last, do the following:
 
 ## tailscale
 
@@ -8,12 +10,17 @@ Last, perform the following steps manually:
 tailscale login
 ```
 
-## configure Dank Linux
+## AI
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+## Configure Dank Linux
 
 - Under Settings -> Theme & Colors -> Browse Themes: Install retrobox
 - Under Power & Sleep -> Idle Settings -> Configure "Automatically lock after", "Turn off monitors after", "Suspend system after"
 
-## configure LibreWolf
+## Configure LibreWolf
 
 - In LibreWolf
   - browse to https://addons.mozilla.org/en-US/firefox/addon/gruvbox-dark-theme/ and install theme
@@ -23,7 +30,7 @@ tailscale login
     - "uBlock Origin" -> `...` -> `Preferences` -> under "Filter lists" tab, select the two entries under "Cookie notices"
     - install extension "SponsorBlock"
 
-## skip if you're not [me](https://michael-klein.info)
+## Add an Avatar (skip if you're not [me](https://michael-klein.info))
 
 ```bash
 curl https://michael-klein.info/images/mk.png -o "${HOME}/.face"

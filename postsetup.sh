@@ -3,4 +3,4 @@
 echo ""
 echo "So far, so good."
 echo ""
-glow postsetup.md
+glow POSTSTEP.md

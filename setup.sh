@@ -96,9 +96,6 @@ mv /tmp/session.json ~/.local/state/DankMaterialShell/session.json
 curl -sS https://starship.rs/install.sh | sh # -s -- --bin-dir /usr/local/bin
 starship preset gruvbox-rainbow > ~/.config/starship.toml
 
-## AI
-# TODO: curl -fsSL https://claude.ai/install.sh | bash
-
 ## niri
 sed -i 's|^[[:space:]]*//[[:space:]]*focus-follows-mouse|    focus-follows-mouse|' $HOME/.config/niri/config.kdl
 CFG="$HOME/.config/niri/dms/binds.kdl"

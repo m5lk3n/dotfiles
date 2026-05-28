@@ -79,9 +79,6 @@ This setup:
 
 ## To do
 
-- Set up Fido (for sudo)
-- Install Claude CLI
-- Install Copilot CLI
 - Automate VS Code extension installation
 
 ## Open
