@@ -106,4 +106,7 @@ sed -i '$i\    Mod+B hotkey-overlay-title="Open Browser" { spawn "librewolf"; }'
 sudo systemctl start tailscaled
 sudo systemctl enable tailscaled
 
+## root config
+echo alias vi='vim' | sudo tee -a "/root/.bashrc"
+
 echo "Done!"
