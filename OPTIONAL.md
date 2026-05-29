@@ -14,8 +14,8 @@ The steps below aim to achieve the following:
 2. Run the following commands:
 
     ```bash
-    lsusb # confirm idVendor and idProduct of the key in the output
-    sudo pacman -S pam-u2f
+    lsusb | grep Titan # confirm idVendor and idProduct of the key in the output
+    sudo pacman -Syu pam-u2f
     echo 'KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="18d1", ATTRS{idProduct}=="9470", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/70-titan-key.rules # idVendor and idProduct must match lsusb output
     sudo udevadm control --reload-rules
     sudo udevadm trigger
@@ -32,7 +32,7 @@ The steps below aim to achieve the following:
     mkdir -p ~/.config/Yubico
     pamu2fcfg > ~/.config/Yubico/u2f_keys # touch the flashing key
     # for backup keys: pamu2fcfg -n >> ~/.config/Yubico/u2f_keys
-    sudo vi /etc/pam.d/sudo # add this as the first line: auth sufficient pam_u2f.so cue
+    sudo vim /etc/pam.d/sudo # add this as the first line: auth sufficient pam_u2f.so cue
     # cue gives a prompt reminding you to touch the key
     cat /etc/pam.d/sudo
     # the result should look as follows:
