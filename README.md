@@ -18,6 +18,9 @@ Installs additional packages and config as per <a href="./setup.sh">setup script
 
   - [Download the latest ISO](https://archlinux.org/download/) and copy it on a USB flash drive
   - Boot from USB stick
+  - Optional: To avoid the following `archinstall` step to fail with "Device or resource busy" on `wipefs`, you may need to run the following:
+    - `lvchange -an /dev/ArchinstallVg/root` (or similar, check with `lvdisplay`)
+    - `fdisk /dev/nvme0n1` (or similar, check with `lsblk`) to delete an existing partition or existing partitions
   - Run `archinstall` (or [follow the installation guide](https://wiki.archlinux.org/title/Installation_guide))
 
 - On Arch, install [Dank Linux](https://danklinux.com):
@@ -32,17 +35,22 @@ Installs additional packages and config as per <a href="./setup.sh">setup script
   sudo shutdown -r now
   ```
 
-- Install `git` and clone this repo:
+- clone this repo:
 
   ```bash
-  sudo pacman -Syu git
+  mkdir -p ~/Work && cd ~/Work # just my preference 
   git clone https://github.com/m5lk3n/dotfiles.git
+  cd dotfiles
   ```
 
 ## Setup
 
 ```bash
 make setup
+spf
+make setup-spf
+make postsetup
+source ~/.bashrc
 ```
 
 ---

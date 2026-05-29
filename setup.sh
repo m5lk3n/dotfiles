@@ -4,7 +4,7 @@ if [ "$EUID" -eq 0 ]; then
   echo "This is not intended to be run as root."
   exit 1
 fi
-if [ ! -f "${HOME}/.config/DankMaterialShell/settings.json" ]; then
+if [ ! -d "${HOME}/.config/DankMaterialShell" ]; then
     echo "Dank Linux must be installed, please see https://github.com/m5lk3n/dotfiles/#prerequisites."
     exit 1
 fi
@@ -36,9 +36,7 @@ cp .misc "${HOME}"
 
 # install additional packages
 sudo pacman -Syu --noconfirm --needed \
-    base-devel \
     code \
-    curl \
     evince \
     exiftool \
     eza \
@@ -68,15 +66,6 @@ yay --noconfirm --answerclean All --answerdiff None -S librewolf-bin
 CODE_CONFIG_DIR=".config/Code - OSS/User"
 mkdir -p "${HOME}/${CODE_CONFIG_DIR}"
 cp "${CODE_CONFIG_DIR}/settings.json" "${HOME}/${CODE_CONFIG_DIR}"
-
-# Superfile config
-## https://superfile.netlify.app/configure/superfile-config/
-CFG="$HOME/.config/superfile/config.toml"
-sed -i \
-  -e 's/^cd_on_quit = .*/cd_on_quit = true/' \
-  -e 's/^theme = .*/theme = "0x96f"/' \
-  -e 's/^metadata = .*/metadata = true/' \
-  "$CFG"
 
 # tools requiring Go
 go install heckel.io/pcopy@latest # "build at" info is missing
