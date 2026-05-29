@@ -86,7 +86,7 @@ starship preset gruvbox-rainbow > ~/.config/starship.toml
 ## niri
 sed -i 's|^[[:space:]]*//[[:space:]]*focus-follows-mouse|    focus-follows-mouse|' $HOME/.config/niri/config.kdl
 CFG="$HOME/.config/niri/dms/binds.kdl"
-sed -i 's/"Mod+T"/"Mod+Return"/' "$CFG"
+sed -i 's/\bMod+T\b/Mod+Return/' "$CFG"
 sed -i '$ s|^}$|    // === Browser ===\n    Mod+B hotkey-overlay-title="Open Browser" { spawn "librewolf"; }\n}|' "$CFG"
 
 ## start tailscale
