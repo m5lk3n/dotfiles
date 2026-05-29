@@ -98,4 +98,4 @@ echo alias vi='vim' | sudo tee -a "/root/.bashrc"
 
 echo "Setup complete."
 echo ""
-echo "Please run 'spf', followed by 'make spf' to configure Superfile, and 'make postsetup' for final steps."
+echo "Please run 'spf', followed by 'make setup-spf' to configure Superfile, and 'make postsetup' for final steps."

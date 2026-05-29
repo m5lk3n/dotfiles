@@ -10,17 +10,14 @@ help:
 ## setup: install dotfiles & packages, configure system except for spf
 .PHONY: setup
 setup:
-	@echo "Running setup..."
 	@./setup.sh
 
-## spf: configure Superfile
-.PHONY: spf
-spf:
-	@echo "Configuring spf..."
+## setup-spf: configure Superfile
+.PHONY: setup-spf
+setup-spf:
 	@./setup-spf.sh
 
 ## postsetup: run post-setup configuration steps
 .PHONY: postsetup
 postsetup:
-	@echo "Running postsetup..."
 	@./postsetup.sh
