@@ -17,8 +17,11 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 ## Configure Dank Linux
 
-- Under Settings -> Theme & Colors -> Browse Themes: Install retrobox
-- Under Power & Sleep -> Idle Settings -> Configure "Automatically lock after", "Turn off monitors after", "Suspend system after"
+Open Dank Linux Settings, then
+
+- under Wallpaper, select `~/Pictures/wallpaper.jpg`
+- under Theme & Colors -> Theme Color -> Browse -> Browse Themes: Install retrobox
+- under Power & Security -> Power & Sleep -> Idle Settings -> Configure "Automatically lock after", "Turn off monitors after", "Suspend system after"
 
 ## Configure LibreWolf
 

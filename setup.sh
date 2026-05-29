@@ -19,6 +19,8 @@ if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
     exit 1
 fi
 
+echo "Starting setup..."
+
 # back up before overwriting
 TS=$(date +%Y%m%d-%H%M%S)
 cp "${HOME}/.bashrc" "${HOME}/.bashrc.bak-$TS"
@@ -76,10 +78,6 @@ cp -r $CHEAT_CONFIG_DIR/* "${HOME}/$CHEAT_CONFIG_DIR"
 
 ## desktop wallpaper
 curl https://raw.githubusercontent.com/basecamp/omarchy/refs/heads/dev/themes/ristretto/backgrounds/1-color-curves.jpg -o "${HOME}/Pictures/wallpaper.jpg"
-jq '.wallpaperPath = "/home/michael/Pictures/wallpaper.jpg"' \
-  ~/.local/state/DankMaterialShell/session.json \
-  > /tmp/session.json && \
-mv /tmp/session.json ~/.local/state/DankMaterialShell/session.json
 
 ## prompt
 curl -sS https://starship.rs/install.sh | sh # -s -- --bin-dir /usr/local/bin
@@ -88,8 +86,8 @@ starship preset gruvbox-rainbow > ~/.config/starship.toml
 ## niri
 sed -i 's|^[[:space:]]*//[[:space:]]*focus-follows-mouse|    focus-follows-mouse|' $HOME/.config/niri/config.kdl
 CFG="$HOME/.config/niri/dms/binds.kdl"
-sed -i 's/"Mod+L"/"Mod+Return"/' "$CFG"
-sed -i '$i\    Mod+B hotkey-overlay-title="Open Browser" { spawn "librewolf"; }' "$CFG"
+sed -i 's/"Mod+T"/"Mod+Return"/' "$CFG"
+sed -i '$ s|^}$|    // === Browser ===\n    Mod+B hotkey-overlay-title="Open Browser" { spawn "librewolf"; }\n}|' "$CFG"
 
 ## start tailscale
 sudo systemctl start tailscaled
@@ -98,4 +96,6 @@ sudo systemctl enable tailscaled
 ## root config
 echo alias vi='vim' | sudo tee -a "/root/.bashrc"
 
-echo "Done!"
+echo "Setup complete."
+echo ""
+echo "Please run 'spf', followed by 'make spf' to configure Superfile, and 'make postsetup' for final steps."

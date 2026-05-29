@@ -21,4 +21,4 @@ sed -i \
   -e 's/^metadata = .*/metadata = true/' \
   "$CFG"
 
-echo "Superfile configured successfully."
+echo "Superfile configured."
