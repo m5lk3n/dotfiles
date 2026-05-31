@@ -39,6 +39,8 @@ cp .misc "${HOME}"
 # install additional packages
 sudo pacman -Syu --noconfirm --needed \
     code \
+    docker \
+    docker-compose \
     evince \
     exiftool \
     eza \
@@ -47,6 +49,8 @@ sudo pacman -Syu --noconfirm --needed \
     glow \
     go \
     jq \
+    lazygit \
+    lazydocker \
     ncdu \
     superfile \
     tailscale \
@@ -62,7 +66,7 @@ else
     echo "yay already installed, skipping."
 fi
 
-yay --noconfirm --answerclean All --answerdiff None -S librewolf-bin
+yay --noconfirm --answerclean All --answerdiff None -S librewolf-bin systemd-manager-tui
 
 # VS Code config
 CODE_CONFIG_DIR=".config/Code - OSS/User"

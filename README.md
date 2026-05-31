@@ -1,10 +1,6 @@
 <h1 align="center">dotfiles</h1>
 
 <p align="center">
-:construction: <b>WORK IN PROGRESS, NOT VERIFIED YET!</b>
-</p>
-
-<p align="center">
 <a href="https://michael-klein.info">My</a> opinionated setup on top of Arch Linux and Dank Linux with <a href="https://github.com/niri-wm/niri">niri</a> as "<em>scrollable-tiling</em> Wayland compositor".
 </p>
 
@@ -35,7 +31,7 @@ Installs additional packages and config as per <a href="./setup.sh">setup script
   sudo shutdown -r now
   ```
 
-- clone this repo:
+- Clone this repo:
 
   ```bash
   mkdir -p ~/Work && cd ~/Work # just my preference 
@@ -85,10 +81,8 @@ This setup:
 
 ---
 
-## To do
-
-- Automate VS Code extension installation
-
 ## Open
+
+- Automate VS Code extension installation?
 
 - `sgpt`?

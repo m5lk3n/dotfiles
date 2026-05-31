@@ -4,6 +4,7 @@ export PATH=$PATH:$HOME/go/bin:$HOME/.local/bin
 alias vi='vim'
 alias ls='eza -lhg --group-directories-first --icons=auto'
 alias ll='spf --fh --fch "$PWD"'
+alias sm='systemd-manager-tui'
 alias pcp='pcopy copy'
 alias ppaste='pcopy paste'
 alias cheat='cheat -a'
