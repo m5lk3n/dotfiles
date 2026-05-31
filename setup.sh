@@ -38,12 +38,16 @@ cp .misc "${HOME}"
 
 # install additional packages
 sudo pacman -Syu --noconfirm --needed \
+    bat \
+    btop \
     code \
     docker \
     docker-compose \
     evince \
     exiftool \
     eza \
+    fd \
+    fzf \
     gvfs-smb \
     gimp \
     glow \
@@ -52,6 +56,7 @@ sudo pacman -Syu --noconfirm --needed \
     lazygit \
     lazydocker \
     ncdu \
+    ripgrep \
     superfile \
     tailscale \
     usbutils

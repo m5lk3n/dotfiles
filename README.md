@@ -77,7 +77,7 @@ This setup:
 
 **I take no responsibility!**
 
-**Also, I'm not responsible for external links!**
+**Also, I'm not responsible for external links either!**
 
 ---
 
@@ -85,4 +85,4 @@ This setup:
 
 - Automate VS Code extension installation?
 
-- `sgpt`?
+- `sgpt` + `rlwrap`?
