@@ -50,10 +50,12 @@ sudo pacman -Syu --noconfirm --needed \
     eza \
     fd \
     fzf \
-    gvfs-smb \
     gimp \
     glow \
+    gnome-calculator \
+    gnome-disk-utility \
     go \
+    gvfs-smb \
     jq \
     lazygit \
     lazydocker \

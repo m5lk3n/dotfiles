@@ -22,9 +22,10 @@ Open Dank Linux Settings, then
     - install extension "SponsorBlock"
   - browse to 'about:addons' -> Themes and install "gruvbox-dark-theme"
 
-## tailscale
+## Run one-offs
 
 ```bash
+cheat # to create a default config (and to pull in community cheatsheets if desired)
 sudo tailscale login
 ```
 
