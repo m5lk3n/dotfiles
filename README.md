@@ -81,6 +81,10 @@ This setup:
 
 ---
 
+## To do
+
+- Extract `.bashrc`-related entries into a dedicated file
+
 ## Open
 
 - Automate VS Code extension installation?

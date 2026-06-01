@@ -29,9 +29,13 @@ cp "${HOME}/.bashrc" "${HOME}/.bashrc.bak-$TS"
 echo "" >> "${HOME}/.bashrc"
 echo "# from https://github.com/m5lk3n/dotfiles:" >> "${HOME}/.bashrc"
 echo "eval \"\$(starship init bash)\"" >> "${HOME}/.bashrc" # prompt
+echo "eval \"\$(zoxide init bash)\"" >> "${HOME}/.bashrc" # "cd"
 echo "source ~/.spf" >> "${HOME}/.bashrc" # superfile, see below
 echo "source ~/.misc" >> "${HOME}/.bashrc"
+echo "bind 'set completion-ignore-case on'" >> "${HOME}/.bashrc"
 echo "source /usr/share/bash-completion/bash_completion" >> "${HOME}/.bashrc"
+echo "source /usr/share/fzf/completion.bash" >> "${HOME}/.bashrc"
+echo "source /usr/share/fzf/key-bindings.bash" >> "${HOME}/.bashrc"
 
 ## dotfiles .bashrc additions
 cp .spf "${HOME}"
@@ -62,7 +66,8 @@ sudo pacman -Syu --noconfirm --needed \
     ncdu \
     superfile \
     tailscale \
-    usbutils
+    usbutils \
+    zoxide
 
 # install yay and LibreWolf via AUR
 if ! command -v yay &> /dev/null; then
