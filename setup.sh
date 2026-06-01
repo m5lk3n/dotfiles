@@ -31,6 +31,7 @@ echo "# from https://github.com/m5lk3n/dotfiles:" >> "${HOME}/.bashrc"
 echo "eval \"\$(starship init bash)\"" >> "${HOME}/.bashrc" # prompt
 echo "source ~/.spf" >> "${HOME}/.bashrc" # superfile, see below
 echo "source ~/.misc" >> "${HOME}/.bashrc"
+echo "source /usr/share/bash-completion/bash_completion" >> "${HOME}/.bashrc"
 
 ## dotfiles .bashrc additions
 cp .spf "${HOME}"
@@ -38,6 +39,7 @@ cp .misc "${HOME}"
 
 # install additional packages
 sudo pacman -Syu --noconfirm --needed \
+    bash-completion \
     bat \
     btop \
     code \
@@ -56,7 +58,6 @@ sudo pacman -Syu --noconfirm --needed \
     lazygit \
     lazydocker \
     ncdu \
-    ripgrep \
     superfile \
     tailscale \
     usbutils
@@ -98,12 +99,17 @@ CFG="$HOME/.config/niri/dms/binds.kdl"
 sed -i 's/\bMod+T\b/Mod+Return/' "$CFG"
 sed -i '$ s|^}$|    // === Browser ===\n    Mod+B hotkey-overlay-title="Open Browser" { spawn "librewolf"; }\n}|' "$CFG"
 
-## start tailscale
+## groups
+sudo usermod -aG docker $USER
+
+## services
+sudo systemctl start docker
+sudo systemctl enable docker
 sudo systemctl start tailscaled
 sudo systemctl enable tailscaled
 
 ## root config
-echo alias vi='vim' | sudo tee -a "/root/.bashrc"
+echo alias vi='vim' | sudo tee -a "/root/.profile"
 
 echo "Setup complete."
 echo ""
