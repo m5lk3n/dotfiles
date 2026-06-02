@@ -45,7 +45,6 @@ cp .misc "${HOME}"
 sudo pacman -Syu --noconfirm --needed \
     bash-completion \
     bat \
-    btop \
     code \
     docker \
     docker-compose \

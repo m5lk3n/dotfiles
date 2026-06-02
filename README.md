@@ -83,6 +83,10 @@ This setup:
 
 ## To do
 
+- Transparent window background
+
+- VS Code font
+
 - Extract `.bashrc`-related entries into a dedicated file
 
 ## Open
