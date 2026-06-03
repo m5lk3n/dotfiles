@@ -122,7 +122,7 @@ sed -i '$ s|^}$|    // === Browser ===\n    Mod+B hotkey-overlay-title="Open Bro
 
 ## ghostty: set background-opacity to 0.8 -> this may require a reboot to take effect
 GHOSTTY_CFG="$HOME/.config/ghostty/config"
-sed -i 's|^background-opacity.*|background-opacity = 0.8|' "$GHOSTTY_CFG"
+sed -i 's|^background-opacity.*|background-opacity = 0.9|' "$GHOSTTY_CFG"
 
 ## groups
 sudo usermod -aG docker $USER

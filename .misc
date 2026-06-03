@@ -1,5 +1,6 @@
 export EDITOR=vim
 export PATH=$PATH:$HOME/go/bin:$HOME/.local/bin
+export BAT_THEME="DarkNeon"
 
 alias vi='vim'
 alias ls='eza -lhg --group-directories-first --icons=auto'

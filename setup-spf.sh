@@ -18,7 +18,9 @@ fi
 sed -i \
   -e 's/^cd_on_quit = .*/cd_on_quit = true/' \
   -e 's/^theme = .*/theme = "0x96f"/' \
+  -e 's/^code_previewer = .*/code_previewer = "bat"/' \
   -e 's/^metadata = .*/metadata = true/' \
+  -e 's/^zoxide_support = .*/zoxide_support = true/' \
   "$CFG"
 
 echo "Superfile configured."
