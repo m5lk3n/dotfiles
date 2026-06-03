@@ -39,3 +39,9 @@ curl -fsSL https://claude.ai/install.sh | bash
 ```bash
 curl https://michael-klein.info/images/mk.png -o "${HOME}/.face"
 ```
+
+## Reboot
+
+```bash
+sudo shutdown -r now
+```

@@ -1,0 +1,8 @@
+// DMS Window Rules - Managed by DankMaterialShell
+// Do not edit manually - changes may be overwritten
+
+// @id=wr_1780483421497642278 @name=code-oss
+window-rule {
+    match app-id="^code-oss$"
+    open-maximized true
+}

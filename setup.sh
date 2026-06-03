@@ -13,7 +13,9 @@ if [ ! -f "${HOME}/.bashrc" ]; then
     exit 1
 fi
 
-read -p "This will overwrite configuration files! Only ~/.bashrc will be backed up. For more details, please see https://github.com/m5lk3n/dotfiles/. Continue? [y/N]: " confirm
+echo "This will overwrite configuration files! Only ~/.bashrc will be backed up. THIS SETUP IS NOT IDEMPOTENT! USE AT YOUR OWN RISK."
+echo "For more details, please see https://github.com/m5lk3n/dotfiles/."
+read -p "Continue? [y/N]: " confirm
 if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
     echo "Aborted."
     exit 1
@@ -21,7 +23,7 @@ fi
 
 echo "Starting setup..."
 
-# back up before overwriting
+# back up .bashrc before overwriting
 TS=$(date +%Y%m%d-%H%M%S)
 cp "${HOME}/.bashrc" "${HOME}/.bashrc.bak-$TS"
 
@@ -58,6 +60,7 @@ sudo pacman -Syu --noconfirm --needed \
     gnome-calculator \
     gnome-disk-utility \
     go \
+    golangci-lint \
     gvfs-smb \
     jq \
     lazygit \
@@ -90,6 +93,8 @@ mkdir -p "${HOME}/${CODE_CONFIG_DIR}"
 cp "${CODE_CONFIG_DIR}/settings.json" "${HOME}/${CODE_CONFIG_DIR}"
 
 # tools requiring Go
+go install golang.org/x/vuln/cmd/govulncheck@latest
+go install github.com/securego/gosec/v2/cmd/gosec@latest
 go install heckel.io/pcopy@latest # "build at" info is missing
 go install github.com/cheat/cheat/cmd/cheat@latest
 CHEAT_CONFIG_DIR=.config/cheat/cheatsheets/personal
@@ -104,10 +109,19 @@ curl -sS https://starship.rs/install.sh | sh # -s -- --bin-dir /usr/local/bin
 starship preset gruvbox-rainbow > ~/.config/starship.toml
 
 ## niri
-sed -i 's|^[[:space:]]*//[[:space:]]*focus-follows-mouse|    focus-follows-mouse|' $HOME/.config/niri/config.kdl
-CFG="$HOME/.config/niri/dms/binds.kdl"
-sed -i 's/\bMod+T\b/Mod+Return/' "$CFG"
-sed -i '$ s|^}$|    // === Browser ===\n    Mod+B hotkey-overlay-title="Open Browser" { spawn "librewolf"; }\n}|' "$CFG"
+NIRI_CFG="$HOME/.config/niri/config.kdl"
+sed -i 's|^[[:space:]]*//[[:space:]]*focus-follows-mouse|    focus-follows-mouse|' $NIRI_CFG
+sed -i '/\.Nautilus/d' $NIRI_CFG
+echo "include \"dms/windowrules.kdl\"" >> "$NIRI_CFG"
+DMS_CONFIG_DIR=".config/niri/dms"
+cp "${DMS_CONFIG_DIR}/windowrules.kdl" "${HOME}/${DMS_CONFIG_DIR}"
+BINDS_CFG="$HOME/.config/niri/dms/binds.kdl"
+sed -i 's/\bMod+T\b/Mod+Return/' "$BINDS_CFG"
+sed -i '$ s|^}$|    // === Browser ===\n    Mod+B hotkey-overlay-title="Open Browser" { spawn "librewolf"; }\n}|' "$BINDS_CFG"
+
+## ghostty: set background-opacity to 0.8 -> this may require a reboot to take effect
+GHOSTTY_CFG="$HOME/.config/ghostty/config"
+sed -i 's|^background-opacity.*|background-opacity = 0.8|' "$GHOSTTY_CFG"
 
 ## groups
 sudo usermod -aG docker $USER

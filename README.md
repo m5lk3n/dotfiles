@@ -54,7 +54,8 @@ source ~/.bashrc
 ## Bookmarks
 
 - [A Quick First Look At The Niri Window Manager](https://youtu.be/uiXiD5foFCI)
-
+- [I Installed the Cleanest Linux Shell (Dank Material Shell on Niri)](https://www.youtube.com/watch?v=1FCAXMIVglU)
+- [Wayland ohne Bastelchaos: „DankMaterialShell“ als Linux-Desktop einrichten](https://www.heise.de/-11284747) (sorry, :de: only)
 - [Archive](https://github.com/m5lk3n/dotfiles/tree/archive)
 
 ---
@@ -68,6 +69,8 @@ This setup:
 - Modifies configuration files! (only `~/.bashrc` is backed up.)
 
 - Installs packages!
+
+- Is NOT idempotent!
 
 - Changes could only be reverted manually!
 
@@ -83,14 +86,11 @@ This setup:
 
 ## To do
 
-- Transparent window background
-
 - VS Code font
-
 - Extract `.bashrc`-related entries into a dedicated file
 
 ## Open
 
+- Make idempotent?
 - Automate VS Code extension installation?
-
 - `sgpt` + `rlwrap`?
