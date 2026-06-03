@@ -86,7 +86,6 @@ This setup:
 
 ## To do
 
-- VS Code font
 - Extract `.bashrc`-related entries into a dedicated file
 
 ## Open

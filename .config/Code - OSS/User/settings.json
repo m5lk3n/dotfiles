@@ -6,5 +6,7 @@
     "github.copilot.nextEditSuggestions.enabled": true,
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.fontSize": 16,
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'"
 }

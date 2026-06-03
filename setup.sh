@@ -68,6 +68,7 @@ sudo pacman -Syu --noconfirm --needed \
     ncdu \
     superfile \
     tailscale \
+    ttf-jetbrains-mono-nerd \
     usbutils \
     zoxide
 
@@ -127,6 +128,7 @@ sed -i 's|^background-opacity.*|background-opacity = 0.8|' "$GHOSTTY_CFG"
 sudo usermod -aG docker $USER
 
 ## services
+echo "Starting and enabling services (this may take a moment)..."
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo systemctl start tailscaled
@@ -137,4 +139,4 @@ echo alias vi='vim' | sudo tee -a "/root/.profile"
 
 echo "Setup complete."
 echo ""
-echo "Please run 'spf', followed by 'make setup-spf' to configure Superfile, and 'make postsetup' for final steps."
+echo "Please run 'spf' and exit again, then run 'make setup-spf' to configure Superfile, and 'make postsetup' for final steps."

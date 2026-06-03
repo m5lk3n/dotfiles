@@ -9,7 +9,8 @@ Last, do the following:
 Open Dank Linux Settings, then
 
 - under Wallpaper, select `~/Pictures/wallpaper.jpg`
-- under Theme & Colors -> Theme Color -> Browse -> Browse Themes: Install "retrobox" -> Select it
+- under Theme & Colors -> Theme Color -> Browse -> Browse Themes: Install "retrobox" -> *Select it*
+- under "Time & Weather" -> Location Search -> Enter location
 - under Power & Security -> Power & Sleep -> Idle Settings -> Configure "Automatically lock after", "Turn off monitors after", "Suspend system after"
 
 ## Configure LibreWolf
@@ -25,7 +26,7 @@ Open Dank Linux Settings, then
 ## Run one-offs
 
 ```bash
-cheat # to create a default config (and to pull in community cheatsheets if desired)
+cheat # Y to create a default config and Y to download the community cheatsheets
 sudo tailscale login
 ```
 
