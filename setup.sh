@@ -41,7 +41,7 @@ echo "source /usr/share/fzf/key-bindings.bash" >> "${HOME}/.bashrc"
 cp .spf "${HOME}"
 cp .misc "${HOME}"
 
-# install additional packages
+# install additional packages via pacman
 sudo pacman -Syu --noconfirm --needed \
     bash-completion \
     bat \
@@ -68,7 +68,7 @@ sudo pacman -Syu --noconfirm --needed \
     usbutils \
     zoxide
 
-# install yay and LibreWolf via AUR
+# install yay
 if ! command -v yay &> /dev/null; then
     echo "yay not found, installing..."
     git clone https://aur.archlinux.org/yay.git /tmp/yay
@@ -78,7 +78,11 @@ else
     echo "yay already installed, skipping."
 fi
 
-yay --noconfirm --answerclean All --answerdiff None -S librewolf-bin systemd-manager-tui
+# install AUR packages via yay
+yay --noconfirm --answerclean All --answerdiff None -S \
+    librewolf-bin \
+    systemd-manager-tui \
+    whosthere-bin
 
 # VS Code config
 CODE_CONFIG_DIR=".config/Code - OSS/User"
