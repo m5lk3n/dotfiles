@@ -1,5 +1,15 @@
 # Optional Steps
 
+## Enable Power Profiles (on Laptops)
+
+```bash
+sudo pacman -S power-profiles-daemon
+sudo systemctl start --now power-profiles-daemon.service
+sudo systemctl enable --now power-profiles-daemon.service
+# restart DMS
+sudo powerprofilesctl set power-saver # optional: to make it permanent
+```
+
 ## Use Google Titan Security Key for `sudo`
 
 The steps below aim to achieve the following:
