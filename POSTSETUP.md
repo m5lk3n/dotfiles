@@ -6,7 +6,7 @@ Last, do the following:
 
 ## Configure Dank Linux
 
-Open Dank Linux Settings, then
+Open Dank Linux Settings (`Super + ,`), then
 
 - under Wallpaper, select `~/Pictures/wallpaper.jpg`
 - under Theme & Colors -> Theme Color -> Browse -> Browse Themes: Install "retrobox" -> *Select it*
@@ -31,6 +31,7 @@ sudo tailscale login
 ```
 
 ## AI
+
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
 ```

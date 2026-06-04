@@ -1,5 +1,42 @@
 # Optional Steps
 
+## Enable Wifi
+
+```bash
+sudo pacman -Syu networkmanager
+sudo systemctl enable --now NetworkManager
+nmtui
+```
+
+## Enable Fingerprint for `sudo` and Dank Linux Lock Screen
+
+1. Open a terminal and log in to have a fallback option: `sudo -s`
+
+2. Open a separate terminal and run the following commands:
+
+    ```bash
+    sudo pacman -Syu fprintd
+    fprintd-enroll # right-index-finger by default
+    fprintd-enroll -f right-middle-finger
+    fprintd-enroll -f left-index-finger
+    sudo vim /etc/pam.d/sudo
+    # add this as the first line:
+    # auth      sufficient    pam_fprintd.so cue
+    # cue gives a prompt reminding you to touch the fingerprint reader
+    cat /etc/pam.d/sudo
+    # the result should look as follows:
+    # auth      sufficient    pam_u2f.so cue
+    # auth      include       system-auth
+    # account   include       system-auth
+    # session   include       system-auth
+    ```
+
+Open Dank Linux Settings (`Super + ,`), then
+
+- under Power & Security -> Lock Screen -> Lock Screen behaviour -> Enable fingerprint authentication
+
+---
+
 ## Enable Power Profiles (on Laptops)
 
 ```bash
@@ -14,8 +51,10 @@ sudo powerprofilesctl set power-saver # optional: to make it permanent
 
 ```bash
 vi ~/.config/niri/config.kdl
-# comment "natural-scroll"
+# comment or remove "natural-scroll"
 ```
+
+---
 
 ## Use Google Titan Security Key for `sudo`
 
@@ -49,14 +88,16 @@ The steps below aim to achieve the following:
     mkdir -p ~/.config/Yubico
     pamu2fcfg > ~/.config/Yubico/u2f_keys # touch the flashing key
     # for backup keys: pamu2fcfg -n >> ~/.config/Yubico/u2f_keys
-    sudo vim /etc/pam.d/sudo # add this as the first line: auth sufficient pam_u2f.so cue
+    sudo vim /etc/pam.d/sudo
+    # add this as the first line:
+    # auth      sufficient      pam_u2f.so cue
     # cue gives a prompt reminding you to touch the key
     cat /etc/pam.d/sudo
     # the result should look as follows:
-    #   auth sufficient pam_u2f.so cue
-    #   auth include system-auth
-    #   account include system-auth
-    #   session include system-auth
+    # auth      sufficient      pam_u2f.so cue
+    # auth      include         system-auth
+    # account   include         system-auth
+    # session   include         system-auth
     ```
 
 ---
