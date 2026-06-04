@@ -10,6 +10,13 @@ sudo systemctl enable --now power-profiles-daemon.service
 sudo powerprofilesctl set power-saver # optional: to make it permanent
 ```
 
+## Disable "Natural Scrolling" (on Laptops/for Touchpads)
+
+```bash
+vi ~/.config/niri/config.kdl
+# comment "natural-scroll"
+```
+
 ## Use Google Titan Security Key for `sudo`
 
 The steps below aim to achieve the following:
