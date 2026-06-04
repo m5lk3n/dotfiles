@@ -17,7 +17,7 @@ Installs additional packages and config as per <a href="./setup.sh">setup script
   - Optional: To avoid the following `archinstall` step to fail with "Device or resource busy" on `wipefs`, you may need to run the following:
     - `lvchange -an /dev/ArchinstallVg/root` (or similar, check with `lvdisplay`)
     - `fdisk /dev/nvme0n1` (or similar, check with `lsblk`) to delete an existing partition or existing partitions
-  - Run `archinstall` (or [follow the installation guide](https://wiki.archlinux.org/title/Installation_guide))
+  - Run `archinstall` (or [follow the installation guide](https://wiki.archlinux.org/title/Installation_guide)). For *Type*, choose *Desktop*, then *niri*.
 
 - On Arch, install [Dank Linux](https://danklinux.com):
 
@@ -46,7 +46,7 @@ make setup
 spf
 make setup-spf
 make postsetup
-source ~/.bashrc
+sudo shutdown -r now # just in case...
 ```
 
 ---
