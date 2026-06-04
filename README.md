@@ -55,8 +55,11 @@ sudo shutdown -r now # just in case...
 
 - [A Quick First Look At The Niri Window Manager](https://youtu.be/uiXiD5foFCI)
 - [I Installed the Cleanest Linux Shell (Dank Material Shell on Niri)](https://www.youtube.com/watch?v=1FCAXMIVglU)
-- [Wayland ohne Bastelchaos: „DankMaterialShell“ als Linux-Desktop einrichten](https://www.heise.de/-11284747) (sorry, :de: only)
+- [Wayland ohne Bastelchaos: „DankMaterialShell“ als Linux-Desktop einrichten](https://www.heise.de/-11284747)<sup>*</sup>
+- [Minimalistischer Linux-Desktop: Der Tiling-Wayland-Compositor Niri im Test](https://www.heise.de/-11229666)<sup>*</sup>
 - [Archive](https://github.com/m5lk3n/dotfiles/tree/archive)
+
+<sup>*</sup>) Sorry, :de: only.
 
 ---
 
