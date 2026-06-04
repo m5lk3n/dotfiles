@@ -37,6 +37,19 @@ Open Dank Linux Settings (`Super + ,`), then
 
 ---
 
+## Enable Screenlocking on Lid-close (on Laptops)
+
+In `~/.config/niri/config.kdl`, add or find the `switch-events` block and insert the `lid-close` event:
+
+```text
+// Lock screen when lid is closed 
+switch-events {
+    lid-close {
+        spawn "dms" "ipc" "call" "lock" "lock"
+    }
+}
+```
+
 ## Enable Power Profiles (on Laptops)
 
 ```bash
