@@ -69,25 +69,21 @@ sudo shutdown -r now # just in case...
 
 ## Disclaimer
 
-**Warning!**
+**Warning**
 
 This setup:
 
-- Modifies configuration files! (only `~/.bashrc` is backed up.)
+- Modifies configuration files (only `~/.bashrc` is backed up).
+- Installs packages.
+- Is not idempotent — repeated runs will produce different results.
+- Requires manual steps to revert changes.
+- Is provided as-is without any warranty or support.
 
-- Installs packages!
+Use at your own risk. I am not responsible for any damage, data loss, or external links.
 
-- Is NOT idempotent!
+**External Sources**
 
-- Changes could only be reverted manually!
-
-- Comes as-is, without support/warranty/guarantee/whatsoever!
-
-**Use at your own risk!**
-
-**I take no responsibility!**
-
-**Also, I'm not responsible for external links either!**
+- The wallpaper was taken from Omarchy's Ristretto theme.
 
 ---
 

@@ -53,6 +53,7 @@ sudo pacman -Syu --noconfirm --needed \
     evince \
     exiftool \
     eza \
+    fastfetch \
     fd \
     fzf \
     gimp \
@@ -102,8 +103,13 @@ CHEAT_CONFIG_DIR=.config/cheat/cheatsheets/personal
 mkdir -p "${HOME}/$CHEAT_CONFIG_DIR"
 cp -r $CHEAT_CONFIG_DIR/* "${HOME}/$CHEAT_CONFIG_DIR"
 
-## desktop wallpaper
+## desktop wallpaper (download from original source, but there's a backup in the repo's Pictures directory in case it gets removed)
 curl https://raw.githubusercontent.com/basecamp/omarchy/refs/heads/dev/themes/ristretto/backgrounds/1-color-curves.jpg -o "${HOME}/Pictures/wallpaper.jpg"
+
+## custom fastfetch
+FASTFETCH_CONFIG_DIR=".config/fastfetch"
+mkdir -p "${HOME}/${FASTFETCH_CONFIG_DIR}"
+cp "${FASTFETCH_CONFIG_DIR}/config.jsonc" "${HOME}/${FASTFETCH_CONFIG_DIR}"
 
 ## prompt
 curl -sS https://starship.rs/install.sh | sh # -s -- --bin-dir /usr/local/bin
@@ -111,7 +117,7 @@ starship preset gruvbox-rainbow > ~/.config/starship.toml
 
 ## niri
 NIRI_CFG="$HOME/.config/niri/config.kdl"
-sed -i 's|^[[:space:]]*//[[:space:]]*focus-follows-mouse|    focus-follows-mouse|' $NIRI_CFG
+sed -i 's|^[[:space:]]*//[[:space:]]*focus-follows-mouse|    focus-follows-mouse //|' $NIRI_CFG
 sed -i '/\.Nautilus/d' $NIRI_CFG
 echo "include \"dms/windowrules.kdl\"" >> "$NIRI_CFG"
 DMS_CONFIG_DIR=".config/niri/dms"

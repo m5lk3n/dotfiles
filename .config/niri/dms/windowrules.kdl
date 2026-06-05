@@ -6,3 +6,9 @@ window-rule {
     match app-id="^code-oss$"
     open-maximized true
 }
+
+// @id=wr_1780639859280276703 @name=gimp
+window-rule {
+    match app-id="^gimp$"
+    open-maximized true
+}
