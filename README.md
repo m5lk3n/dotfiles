@@ -90,9 +90,9 @@ Use at your own risk. I am not responsible for any damage, data loss, or externa
 ## To do
 
 - Extract `.bashrc`-related entries into a dedicated file
+- Make idempotent
 
 ## Open
 
-- Make idempotent?
-- Automate VS Code extension installation?
-- `sgpt` + `rlwrap`?
+- Replace font?
+- Automate installation of VS Code extensions?

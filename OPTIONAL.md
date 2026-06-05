@@ -69,6 +69,47 @@ vi ~/.config/niri/config.kdl
 
 ---
 
+## Install Claude CLI (AI)
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+## Set up [sgpt](https://github.com/tbckr/sgpt) and [rlwrap](https://github.com/hanslub42/rlwrap) for `qa` (AI)
+
+1. Install
+
+    ```bash
+    go install github.com/tbckr/sgpt/v2/cmd/sgpt@latest
+    sudo pacman -Syu rlwrap
+    ```
+
+2. Create the following `~/.local/bin/qa` ([source](https://sgpt.readthedocs.io/en/latest/usage/chat/)):
+
+    ```bash
+    #!/usr/bin/env bash
+
+    shopt -s -o errexit
+    shopt -s -o pipefail
+    shopt -s -o nounset
+    shopt -s inherit_errexit
+
+    # https://sgpt.readthedocs.io/en/latest/getting-started/
+    export OPENAI_API_BASE="" # your provider URL, e.g., https://api.mammouth.ai/v1
+    export OPENAI_API_KEY="" # your provider API key
+    export LLM="" # your provider supported model, e.g. see https://info.mammouth.ai/docs/api-quick-start/#models-pricing
+
+    export CHAT="$(date '+%Y%m%d%H%M%S%3N')_$(tr -dc 'A-Za-z' </dev/urandom
+    | head -c 3)"
+    rlwrap bash -c 'echo ▶; while read in; do [[ -n "$in" ]] && echo ■ && s
+    gpt -m "$LLM" --chat "$CHAT" "$in" && echo ▶ && notify-send --urgency=l
+    ow 💬 ; done'
+    ```
+
+3. `chmod 755 ~/.local/bin/qa`
+
+---
+
 ## Use Google Titan Security Key for `sudo`
 
 The steps below aim to achieve the following:

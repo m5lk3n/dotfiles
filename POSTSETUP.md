@@ -30,12 +30,6 @@ cheat # Y to create a default config and Y to download the community cheatsheets
 sudo tailscale login
 ```
 
-## AI
-
-```bash
-curl -fsSL https://claude.ai/install.sh | bash
-```
-
 ## Add an Avatar (skip if you're not [me](https://michael-klein.info))
 
 ```bash
