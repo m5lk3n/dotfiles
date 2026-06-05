@@ -99,11 +99,8 @@ curl -fsSL https://claude.ai/install.sh | bash
     export OPENAI_API_KEY="" # your provider API key
     export LLM="" # your provider supported model, e.g. see https://info.mammouth.ai/docs/api-quick-start/#models-pricing
 
-    export CHAT="$(date '+%Y%m%d%H%M%S%3N')_$(tr -dc 'A-Za-z' </dev/urandom
-    | head -c 3)"
-    rlwrap bash -c 'echo ▶; while read in; do [[ -n "$in" ]] && echo ■ && s
-    gpt -m "$LLM" --chat "$CHAT" "$in" && echo ▶ && notify-send --urgency=l
-    ow 💬 ; done'
+    export CHAT="$(date '+%Y%m%d%H%M%S%3N')_$(tr -dc 'A-Za-z' </dev/urandom | head -c 3)"
+    rlwrap bash -c 'echo ▶; while read in; do [[ -n "$in" ]] && echo ■ && sgpt -m "$LLM" --chat "$CHAT" "$in" && echo ▶ && notify-send --urgency=low 💬 ; done'
     ```
 
 3. `chmod 755 ~/.local/bin/qa`
