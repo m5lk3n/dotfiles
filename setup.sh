@@ -74,6 +74,7 @@ sudo pacman -Syu --noconfirm --needed \
     pipewire \
     pipewire-pulse \
     pipewire-alsa \
+    rsync \
     superfile \
     tailscale \
     ttf-jetbrains-mono-nerd \
