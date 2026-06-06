@@ -94,5 +94,4 @@ Use at your own risk. I am not responsible for any damage, data loss, or externa
 
 ## Open
 
-- Replace font?
 - Automate installation of VS Code extensions?

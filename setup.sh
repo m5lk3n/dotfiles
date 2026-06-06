@@ -67,9 +67,11 @@ sudo pacman -Syu --noconfirm --needed \
     lazygit \
     lazydocker \
     ncdu \
+    noto-fonts-emoji \
     superfile \
     tailscale \
     ttf-jetbrains-mono-nerd \
+    unzip \
     usbutils \
     zoxide
 
@@ -104,7 +106,7 @@ mkdir -p "${HOME}/$CHEAT_CONFIG_DIR"
 cp -r $CHEAT_CONFIG_DIR/* "${HOME}/$CHEAT_CONFIG_DIR"
 
 ## desktop wallpaper (download from original source, but there's a backup in the repo's Pictures directory in case it gets removed)
-curl https://raw.githubusercontent.com/basecamp/omarchy/refs/heads/dev/themes/ristretto/backgrounds/1-color-curves.jpg -o "${HOME}/Pictures/wallpaper.jpg"
+curl -L https://raw.githubusercontent.com/basecamp/omarchy/refs/heads/dev/themes/ristretto/backgrounds/1-color-curves.jpg -o "${HOME}/Pictures/wallpaper.jpg"
 
 ## custom fastfetch
 FASTFETCH_CONFIG_DIR=".config/fastfetch"

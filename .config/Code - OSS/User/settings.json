@@ -7,6 +7,6 @@
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.fontSize": 16,
     "window.zoomLevel": 1,
-    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
-    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'"
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Noto Color Emoji', monospace",
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font', 'Noto Color Emoji', monospace"
 }
