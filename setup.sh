@@ -50,6 +50,7 @@ sudo pacman -Syu --noconfirm --needed \
     bat \
     bluez \
     bluez-utils \
+    chromium \
     code \
     docker \
     docker-compose \
@@ -60,6 +61,7 @@ sudo pacman -Syu --noconfirm --needed \
     fd \
     fzf \
     gimp \
+    github-cli \
     glow \
     gnome-calculator \
     gnome-disk-utility \

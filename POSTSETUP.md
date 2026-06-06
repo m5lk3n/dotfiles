@@ -15,6 +15,7 @@ Open Dank Linux Settings (`Super + ,`), then
 
 ## Configure LibreWolf
 
+- Run once: 'librewolf --setDefaultBrowser'
 - In LibreWolf
   - browse to 'about:config', set 'privacy.resistFingerprinting' to 'false'
   - browse to 'about:preferences', select dark mode
