@@ -13,4 +13,4 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-set enable-bracketed-paste on
+bind 'set enable-bracketed-paste on'

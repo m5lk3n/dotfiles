@@ -91,7 +91,3 @@ Use at your own risk. I am not responsible for any damage, data loss, or externa
 
 - Extract `.bashrc`-related entries into a dedicated file
 - Make idempotent
-
-## Open
-
-- Automate installation of VS Code extensions?
