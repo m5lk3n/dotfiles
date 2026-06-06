@@ -45,6 +45,7 @@ cp .misc "${HOME}"
 
 # install additional packages via pacman
 sudo pacman -Syu --noconfirm --needed \
+    alsa-utils \
     bash-completion \
     bat \
     code \
@@ -68,10 +69,14 @@ sudo pacman -Syu --noconfirm --needed \
     lazydocker \
     ncdu \
     noto-fonts-emoji \
+    pipewire \
+    pipewire-pulse \
+    pipewire-alsa \
     superfile \
     tailscale \
     ttf-jetbrains-mono-nerd \
     unzip \
+    wireplumber \
     usbutils \
     zoxide
 
@@ -137,10 +142,9 @@ sudo usermod -aG docker $USER
 
 ## services
 echo "Starting and enabling services (this may take a moment)..."
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo systemctl start tailscaled
-sudo systemctl enable tailscaled
+sudo systemctl enable --now docker
+sudo systemctl enable --now tailscaled
+systemctl --user enable --now pipewire wireplumber pipewire-pulse
 
 ## root config
 echo alias vi='vim' | sudo tee -a "/root/.profile"
