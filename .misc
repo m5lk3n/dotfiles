@@ -12,5 +12,3 @@ alias cheat='cheat -a'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-
-bind 'set enable-bracketed-paste on'

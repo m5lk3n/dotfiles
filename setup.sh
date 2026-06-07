@@ -27,21 +27,21 @@ echo "Starting setup..."
 TS=$(date +%Y%m%d-%H%M%S)
 cp "${HOME}/.bashrc" "${HOME}/.bashrc.bak-$TS"
 
-# .bashrc
+# update .bashrc
 echo "" >> "${HOME}/.bashrc"
 echo "# from https://github.com/m5lk3n/dotfiles:" >> "${HOME}/.bashrc"
 echo "eval \"\$(starship init bash)\"" >> "${HOME}/.bashrc" # prompt
 echo "eval \"\$(zoxide init bash)\"" >> "${HOME}/.bashrc" # "cd"
 echo "source ~/.spf" >> "${HOME}/.bashrc" # superfile, see below
 echo "source ~/.misc" >> "${HOME}/.bashrc"
-echo "bind 'set completion-ignore-case on'" >> "${HOME}/.bashrc"
 echo "source /usr/share/bash-completion/bash_completion" >> "${HOME}/.bashrc"
 echo "source /usr/share/fzf/completion.bash" >> "${HOME}/.bashrc"
 echo "source /usr/share/fzf/key-bindings.bash" >> "${HOME}/.bashrc"
 
-## dotfiles .bashrc additions
+## copy shell additions
 cp .spf "${HOME}"
 cp .misc "${HOME}"
+cp .inputrc "${HOME}"
 
 # install additional packages via pacman
 sudo pacman -Syu --noconfirm --needed \
