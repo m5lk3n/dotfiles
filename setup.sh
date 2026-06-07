@@ -123,8 +123,11 @@ mkdir -p "${HOME}/${FASTFETCH_CONFIG_DIR}"
 cp "${FASTFETCH_CONFIG_DIR}/config.jsonc" "${HOME}/${FASTFETCH_CONFIG_DIR}"
 
 ## prompt
+STARSHIP_CFG=".config/starship.toml"
 curl -sS https://starship.rs/install.sh | sh # -s -- --bin-dir /usr/local/bin
-starship preset gruvbox-rainbow > ~/.config/starship.toml
+starship preset gruvbox-rainbow > "${HOME}/${STARSHIP_CFG}"
+sed -i 's/\$golang\\/$custom\\/' "${HOME}/${STARSHIP_CFG}"
+cat "${STARSHIP_CFG}" >> "${HOME}/${STARSHIP_CFG}"
 
 ## niri
 NIRI_CFG="$HOME/.config/niri/config.kdl"

@@ -1,0 +1,9 @@
+
+[custom.golang]
+# improved Go version info: "go1.26.4-X:nodwarf5 linux/amd64" -> "v1.26.4"
+detect_extensions = ["go"]
+detect_files = ["go.mod", "go.sum", "go.work", "glide.yaml", "Gopkg.yml", "Gopkg.lock", ".go-version"]
+command = "go version | sed 's/go version go//; s/[- ].*//'"
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( v$output) ](fg:color_fg0 bg:color_blue)]($style)'
