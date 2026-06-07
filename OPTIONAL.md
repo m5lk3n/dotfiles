@@ -1,14 +1,32 @@
 # Optional Steps
 
-## Enable Wifi
+<details>
+<summary>
+Enable Wifi
+</summary>
 
 ```bash
 sudo pacman -Syu networkmanager
 sudo systemctl enable --now NetworkManager
 nmtui
 ```
+</details>
 
-## Enable Fingerprint for `sudo` and Dank Linux Lock Screen
+<details>
+<summary>
+Install Additional Packages
+</summary>
+
+```bash
+sudo pacman -Syu chromium
+yay -S sleek
+```
+</details>
+
+<details>
+<summary>
+Enable Fingerprint for `sudo` and Dank Linux Lock Screen
+</summary>
 
 1. Open a terminal and log in to have a fallback option: `sudo -s`
 
@@ -34,10 +52,14 @@ nmtui
 Open Dank Linux Settings (`Super + ,`), then
 
 - under Power & Security -> Lock Screen -> Lock Screen behaviour -> Enable fingerprint authentication
+</details>
 
 ---
 
-## Enable Screenlocking on Lid-close (on Laptops)
+<details>
+<summary>
+Enable Screenlocking on Lid-close (on Laptops)
+</summary>
 
 In `~/.config/niri/config.kdl`, add or find the `switch-events` block and insert the `lid-close` event:
 
@@ -49,8 +71,12 @@ switch-events {
     }
 }
 ```
+</details>
 
-## Enable Power Profiles (on Laptops)
+<details>
+<summary>
+Enable Power Profiles (on Laptops)
+</summary>
 
 ```bash
 sudo pacman -S power-profiles-daemon
@@ -59,25 +85,64 @@ sudo systemctl enable --now power-profiles-daemon.service
 # restart DMS
 sudo powerprofilesctl set power-saver # optional: to make it permanent
 ```
+</details>
 
-## Disable "Natural Scrolling" (on Laptops/for Touchpads)
+<details>
+<summary>
+Disable "Natural Scrolling" (on Laptops/for Touchpads)
+</summary>
 
 ```bash
 vi ~/.config/niri/config.kdl
 # comment or remove "natural-scroll"
 ```
+</details>
+
+<details>
+<summary>
+Enable Keyboard Light (on Backlit Keyboards)
+</summary>
+
+1. Install `brightnessctl`:
+
+    ```bash
+    sudo pacman -Syu brightnessctl
+    brightnessctl -l # find device entry, e.g., kbd_backlight
+    ```
+
+2. Configure `niri`:
+
+    ```bash
+    NIRI_CFG="$HOME/.config/niri/config.kdl"
+    echo "" >> "$NIRI_CFG"
+    echo "// Run one-offs at startup" >> "$NIRI_CFG"
+    echo "spawn-at-startup \"brightnessctl\" \"-d\" \"chromeos::kbd_backlight\" \"set\" \"100%\"" >> "$NIRI_CFG"
+    ```
+</details>
 
 ---
 
-## Install Claude CLI (AI)
+<details>
+<summary>
+Install Claude CLI (AI)
+</summary>
 
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
 ```
+</details>
 
-## Set up [sgpt](https://github.com/tbckr/sgpt) and [rlwrap](https://github.com/hanslub42/rlwrap) for `qa` (AI)
+<details>
+<summary>
+Set up `sgpt` and `rlwrap` for `qa` (AI)
+</summary>
 
-1. Install
+Sources:
+
+- [sgpt](https://github.com/tbckr/sgpt)
+- [rlwrap](https://github.com/hanslub42/rlwrap)
+
+1. Install:
 
     ```bash
     go install github.com/tbckr/sgpt/v2/cmd/sgpt@latest
@@ -104,10 +169,14 @@ curl -fsSL https://claude.ai/install.sh | bash
     ```
 
 3. `chmod 755 ~/.local/bin/qa`
+</details>
 
 ---
 
-## Use Google Titan Security Key for `sudo`
+<details>
+<summary>
+Use Google Titan Security Key for `sudo`
+</summary>
 
 The steps below aim to achieve the following:
 
@@ -162,3 +231,4 @@ Replace
 with
 
 `auth required pam_u2f.so cue`
+</details>
