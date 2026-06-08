@@ -70,6 +70,7 @@ sudo pacman -Syu --noconfirm --needed \
     jq \
     lazygit \
     lazydocker \
+    less \
     ncdu \
     noto-fonts-emoji \
     pipewire \
