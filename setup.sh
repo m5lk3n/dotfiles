@@ -52,6 +52,7 @@ sudo pacman -Syu --noconfirm --needed \
     bluez-utils \
     code \
     docker \
+    docker-buildx \
     docker-compose \
     evince \
     exiftool \
