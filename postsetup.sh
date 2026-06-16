@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo ""
-echo "So far, so good."
-echo ""
 glow POSTSETUP.md
+
+read -rsp $'Press any key to continue...\n' -n 1
+
+glow TROUBLESHOOTING.md
