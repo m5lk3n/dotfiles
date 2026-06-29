@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD033 -->
 <h1 align="center">dotfiles</h1>
 
 <p align="center">
@@ -11,6 +12,7 @@
 <p align="center">
 Installs additional packages and config as per <a href="./setup.sh">setup script</a>. Provides some post-setup recommendations as per <a href="./postsetup.md">this documentation</a>.
 </p>
+<!-- markdownlint-enable MD033 -->
 
 ## Prerequisites
 
@@ -69,7 +71,7 @@ sudo shutdown -r now # just in case...
 
 ## Disclaimer
 
-**Warning**
+### Warning
 
 This setup:
 
@@ -81,7 +83,7 @@ This setup:
 
 Use at your own risk. I am not responsible for any damage, data loss, or external links.
 
-**External Sources**
+### External Sources
 
 - The wallpaper was taken from Omarchy's Ristretto theme.
 

@@ -1,5 +1,6 @@
 # Optional Steps
 
+<!-- markdownlint-disable MD033 -->
 <details>
 <summary>
 Enable Wifi
@@ -10,6 +11,7 @@ sudo pacman -Syu networkmanager
 sudo systemctl enable --now NetworkManager
 nmtui
 ```
+
 </details>
 
 <details>
@@ -21,6 +23,7 @@ Install Additional Packages
 sudo pacman -Syu chromium
 yay -S sleek
 ```
+
 </details>
 
 <details>
@@ -52,6 +55,7 @@ Enable Fingerprint for `sudo` and Dank Linux Lock Screen
 Open Dank Linux Settings (`Super + ,`), then
 
 - under Power & Security -> Lock Screen -> Lock Screen behaviour -> Enable fingerprint authentication
+
 </details>
 
 ---
@@ -71,6 +75,7 @@ switch-events {
     }
 }
 ```
+
 </details>
 
 <details>
@@ -85,6 +90,7 @@ sudo systemctl enable --now power-profiles-daemon.service
 # restart DMS
 sudo powerprofilesctl set power-saver # optional: to make it permanent
 ```
+
 </details>
 
 <details>
@@ -96,6 +102,7 @@ Disable "Natural Scrolling" (on Laptops/for Touchpads)
 vi ~/.config/niri/config.kdl
 # comment or remove "natural-scroll"
 ```
+
 </details>
 
 <details>
@@ -118,6 +125,7 @@ Enable Keyboard Light (on Backlit Keyboards)
     echo "// Run one-offs at startup" >> "$NIRI_CFG"
     echo "spawn-at-startup \"brightnessctl\" \"-d\" \"chromeos::kbd_backlight\" \"set\" \"100%\"" >> "$NIRI_CFG"
     ```
+
 </details>
 
 ---
@@ -130,6 +138,7 @@ Install Claude CLI (AI)
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
 ```
+
 </details>
 
 <details>
@@ -169,6 +178,7 @@ Sources:
     ```
 
 3. `chmod 755 ~/.local/bin/qa`
+
 </details>
 
 ---
@@ -183,7 +193,7 @@ The steps below aim to achieve the following:
 - Touch the Titan key and `sudo` command succeeds
 - Without the key, `sudo` falls back to password
 
-### Setup Steps
+## Setup Steps
 
 1. Plug in the key.
 
