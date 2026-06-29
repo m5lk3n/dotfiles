@@ -12,7 +12,6 @@
 <p align="center">
 Installs additional packages and config as per <a href="./setup.sh">setup script</a>. Provides some post-setup recommendations as per <a href="./postsetup.md">this documentation</a>.
 </p>
-<!-- markdownlint-enable MD033 -->
 
 ## Prerequisites
 
